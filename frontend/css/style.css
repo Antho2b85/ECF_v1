@@ -1,26 +1,157 @@
-.navbar {
-    font-family: "Poppins", "sans-serif";
+/* ============================
+   COULEURS & TEXTES
+============================ */
+
+.text-vg-primary {
+  color: var(--primary) !important;
+}
+.text-vg-secondary {
+  color: var(--secondary) !important;
+}
+.text-vg-light {
+  color: var(--light) !important;
+}
+.text-vg-dark {
+  color: var(--dark) !important;
 }
 
-.bg-custom{
-    background-color: var(--primary)!important;
+.bg-custom {
+  background-color: var(--primary) !important;
+}
+
+.bg-custom-light {
+  background-color: var(--light) !important;
 }
 
 .bg-custom .navbar-brand,
 .bg-custom .nav-link,
 .bg-custom .nav-link.active,
 .bg-custom .nav-link.show {
-    color: var(--light) !important;
+  color: var(--light) !important;
 }
 
-.btn{
-    background-color: var(--light);
-    color: var(--dark)!important;
-    margin-left: 70px;
-    margin-right: 10px;
+/* ============================
+   TYPOGRAPHIE
+============================ */
+
+.navbar,
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================
+   BOUTONS
+============================ */
+
+.btn {
+  background-color: var(--light);
+  color: var(--dark) !important;
+  margin-left: 70px;
+  margin-right: 10px;
 }
 
 .btn-connexion:hover {
-    background-color: #ffffff !important;
-    color: var(--primary) !important;
+  background-color: #ffffff !important;
+  color: var(--primary) !important;
+}
+
+/* Boutons dans les sections */
+section .btn-connexion {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+/* ============================
+   HERO
+============================ */
+
+.hero {
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-text p {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.hero .btn {
+  background-color: var(--primary);
+  color: var(--dark) !important;
+}
+
+/* Ajustement mobile */
+@media (max-width: 767.98px) {
+  .hero-text {
+    top: 2%;
+  }
+}
+
+/* Bouton du hero */
+.hero-text button {
+  display: block;
+  margin: 15% auto 0 auto;
+}
+
+/* ============================
+   NAVBAR MOBILE
+============================ */
+
+@media (max-width: 991.98px) {
+  .navbar .btn-connexion {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ============================
+   IMAGES & ALIGNEMENTS
+============================ */
+
+.row-equal {
+  align-items: stretch;
+}
+
+.img-equal-mobile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+@media (min-width: 768px) {
+  .img-equal-mobile {
+    height: auto;
+    object-position: center;
+  }
+}
+
+/* ============================
+   DIVERS
+============================ */
+
+/* main {
+  background-color: var(--light);
+} */
+
+.border-vg {
+  border-color: var(--primary) !important;
+}
+
+.decalage-bas {
+  margin-top: 60px;
 }

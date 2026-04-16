@@ -1,57 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vite & Gourmand propose des menus variés, commandes en ligne, service traiteur et gestion d’événements à Bordeaux. Simple, rapide et gourmand.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/variable.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vite & Gourmand propose des menus variés, commandes en ligne, service traiteur et gestion d’événements à Bordeaux. Simple, rapide et gourmand."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/variable.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>Vite & Gourmand – Menus, Commandes et Traiteur à Bordeaux</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-<nav class="navbar navbar-expand-lg bg-body-tertiary bg-custom">
-  <div class="container-fluid">
-    <a class="navbar-brand brand-title" href="#">Vite & Gourmand</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Galerie</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Nos menus & Évenements</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">A propos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Contacts</a>
-        </li>
-        
-      </ul>
-      <div>
-      <button type="button" class="btn btn-connexion">Connexion</button>
+      <!-- Navbar de Bootstrap -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-custom">
+        <div class="container-fluid">
+          <a class="navbar-brand brand-title" href="#">Vite & Gourmand</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"
+                  >Galerie</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Nos menus & Évenements</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >A propos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+            <div>
+              <button type="button" class="btn btn-connexion">Connexion</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End navbar -->
+      <div class="position-relative hero" style="height: 350px">
+        <img
+          src="/assets/nikolayfrolochkin-buffet-3085114_1920.jpg"
+          class="w-100 h-100 object-fit-cover"
+          alt="Hero"
+        />
+
+        <!-- Overlay sombre -->
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+        ></div>
+
+        <!-- Titre centré -->
+        <div class="hero-text text-white">
+          <h1>Vite & Gourmand</h1>
+          <p>
+            Julie et José vous accueillent autour d’une cuisine <br />
+            généreuse et authentique
+          </p>
+
+          <button type="button" class="btn btn-connexion mt-3 mt-lg-5">
+            Réserver
+          </button>
+        </div>
       </div>
-    </div>
-  </div>
-</nav>
-<div>
-<h1>Vite & Gourmand</h1>
-      <img src="" alt="" srcset="">
-</div>
     </header>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
+
+    <main>
+      <section class="container py-5">
+        <!-- TITRE PRINCIPAL -->
+        <div class="d-flex align-items-center justify-content-center mb-5">
+          <span class="flex-grow-1 border-top border-2 border-vg"></span>
+          <h2 class="text-center mx-3 text-vg-primary">
+            Bienvenue chez Vite & Gourmand
+          </h2>
+          <span class="flex-grow-1 border-top border-2 border-vg"></span>
+        </div>
+        <div class="row">
+          <!-- ========================= -->
+          <!-- COLONNE GAUCHE -->
+          <!-- ========================= -->
+          <div class="col-md-6">
+            <div class="row row-equal">
+              <!-- IMAGE 1 -->
+              <div class="col-6 col-md-6 order-1 d-flex">
+                <img
+                  src="/assets/stocksnap-food-2616326_1920.jpg"
+                  class="img-fluid rounded img-equal-mobile"
+                  alt="Présentation"
+                />
+              </div>
+
+              <!-- TEXTE -->
+              <div
+                class="col-6 col-md-6 d-flex flex-column justify-content-center order-2 order-md-2"
+              >
+                <p>
+                  Bienvenue sur le site de Vite & Gourmand. <br />
+                  <!-- Julie et José vous invitent à découvrir une cuisine généreuse,
+                  authentique et préparée avec passion. -->
+                </p>
+                <p>
+                  Nous mettons tout notre savoir-faire au service de vos
+                  événements.
+                </p>
+                <p class="mt-3">
+                  Depuis plus de 25 ans, Julie et José accompagnent leurs
+                  clients avec sérieux et passion. Leur expérience, leur
+                  organisation et leur sens du détail garantissent des
+                  prestations soignées et adaptées à chaque événement.
+                </p>
+
+                <!-- Bouton desktop -->
+                <button class="btn btn-connexion d-none d-md-inline-block mt-3">
+                  Nos menus
+                </button>
+              </div>
+
+              <!-- BOUTON MOBILE (sous image + texte) -->
+              <div class="col-12 d-md-none text-center order-3">
+                <button class="btn btn-connexion mt-3 mx-auto d-block">
+                  Nos menus
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================= -->
+          <!-- COLONNE DROITE -->
+          <!-- ========================= -->
+          <div class="col-md-6">
+            <!-- TITRE DU BLOC 2 -->
+            <div
+              class="d-flex align-items-center justify-content-center mb-4 mt-3"
+            >
+              <span
+                class="d-none d-md-block flex-grow-1 border-top border-2 border-vg"
+              ></span>
+              <h2 class="text-center text-vg-primary mx-3">
+                Nos menus de fêtes
+              </h2>
+              <span
+                class="d-none d-md-block flex-grow-1 border-top border-2 border-vg"
+              ></span>
+            </div>
+            <div class="row row-equal">
+              <!-- IMAGE 2 -->
+              <div class="col-6 col-md-6 order-1 d-flex">
+                <img
+                  src="/assets/sookie_cfw-buffet-617156_1920.jpg"
+                  class="img-fluid rounded img-equal-mobile"
+                  alt="Présentation"
+                />
+              </div>
+
+              <!-- TEXTE -->
+              <div
+                class="col-6 col-md-6 d-flex flex-column justify-content-center order-2 order-md-2"
+              >
+                <p>
+                  Entre Noël et Pâques, découvrez nos propositions gourmandes
+                  pour célébrer vos moments importants. <br />
+                  Explorez nos plus beaux buffets, dressages et moments
+                  partagés. Un aperçu en images vous attend dans la galerie.
+                </p>
+
+                <!-- Bouton desktop -->
+                <button class="btn btn-connexion d-none d-md-inline-block mt-3">
+                  Galerie
+                </button>
+              </div>
+
+              <!-- BOUTON MOBILE (sous image + texte) -->
+              <div class="col-12 d-md-none text-center order-3">
+                <button class="btn btn-connexion mt-3 mx-auto d-block">
+                  Galerie
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- AVIS CLIENTS VALIDÉS -->
+        <div class="mt-5">
+          <div class="d-flex align-items-center justify-content-center mb-4">
+            <span
+              class="d-none d-md-block flex-grow-1 border-top border-2 border-vg"
+            ></span>
+            <h2 class="text-center mx-3 text-vg-primary">Avis clients</h2>
+            <span
+              class="d-none d-md-block flex-grow-1 border-top border-2 border-vg"
+            ></span>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div
+                class="p-3 border rounded bg-white shadow-sm bg-custom-light"
+              >
+                <p class="mb-1"><strong>★★★★★</strong></p>
+                <p class="mb-1">
+                  “Un service impeccable et une cuisine délicieuse.”
+                </p>
+                <small class="text-muted"> Marie</small>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="p-3 border rounded bg-white shadow-sm bg-custom-light"
+              >
+                <p class="mb-1"><strong>★★★★☆</strong></p>
+                <p class="mb-1">“Très bon buffet, organisation parfaite.”</p>
+                <small class="text-muted"> Thomas</small>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="p-3 border rounded bg-white shadow-sm bg-custom-light"
+              >
+                <p class="mb-1"><strong>★★★★★</strong></p>
+                <p class="mb-1">
+                  “Julie et José sont adorables, je recommande !”
+                </p>
+                <small class="text-muted"> Sophie</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-custom text-white py-4">
+      <div class="container d-flex flex-column" style="min-height: 130px">
+        <!-- Top -->
+        <h2 class="text-center mb-3">Nos horaires</h2>
+
+        <!-- Milieu (Mobile) -->
+        <div class="d-flex justify-content-between d-md-none mb-4">
+          <span>Du lundi au dimanche</span>
+          <span class="text-center">11:30 - 14:00</span>
+          <span class="text-end">18:30 - 22:00</span>
+        </div>
+
+        <!-- Bottom -->
+        <div class="mt-auto d-flex align-items-center justify-content-between">
+          <!-- Lien gauche -->
+          <a href="#" class="text-vg-dark text-decoration-none"
+            >Mentions légales</a
+          >
+
+          <!-- Span du desktop -->
+          <div class="d-none d-md-flex gap-3">
+            <span class="ms-5">Du lundi au dimanche</span>
+            <span>11:30 - 14:00</span>
+            <span>18:30 - 22:00</span>
+          </div>
+
+          <!-- Lien droit -->
+          <a href="#" class="text-vg-dark text-decoration-none"
+            >Conditions générales de vente</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
