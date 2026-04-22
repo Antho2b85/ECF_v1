@@ -1,6 +1,5 @@
-<header>
-  <!-- Navbar de Bootstrap -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-custom">
+<!-- Navbar de Bootstrap -->
+  <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary bg-custom">
     <div class="container-fluid">
       <a class="navbar-brand brand-title" href="#">Vite & Gourmand</a>
 
@@ -25,7 +24,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"
-              >Nos menus & Évenements</a
+              >Nos menus & événements</a
             >
           </li>
           <li class="nav-item">
@@ -42,29 +41,4 @@
     </div>
   </nav>
   <!-- End navbar -->
-  <div class="position-relative hero" style="height: 350px">
-    <img
-      src="/assets/nikolayfrolochkin-buffet-3085114_1920.jpg"
-      class="w-100 h-100 object-fit-cover"
-      alt="Hero"
-    />
 
-    <!-- Overlay sombre -->
-    <div
-      class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
-    ></div>
-
-    <!-- Titre centré -->
-    <div class="hero-text text-white">
-      <h1>Vite & Gourmand</h1>
-      <p>
-        Julie et José vous accueillent autour d’une cuisine <br />
-        généreuse et authentique
-      </p>
-
-      <button type="button" class="btn btn-connexion mt-3 mt-lg-5">
-        Réserver
-      </button>
-    </div>
-  </div>
-</header>

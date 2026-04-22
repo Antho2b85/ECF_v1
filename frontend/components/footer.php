@@ -13,7 +13,7 @@
     <!-- Bottom -->
     <div class="mt-auto d-flex align-items-center justify-content-between">
       <!-- Lien gauche -->
-      <a href="#" class="text-vg-dark text-decoration-none">Mentions légales</a>
+      <a href="#" class="text-vg-dark text-decoration-underline">Mentions légales</a>
 
       <!-- Span du desktop -->
       <div class="d-none d-md-flex gap-3">
@@ -23,7 +23,7 @@
       </div>
 
       <!-- Lien droit -->
-      <a href="#" class="text-vg-dark text-decoration-none"
+      <a href="#" class="text-vg-dark text-decoration-underline"
         >Conditions générales de vente</a
       >
     </div>

@@ -15,6 +15,10 @@
   color: var(--dark) !important;
 }
 
+.icon-user {
+  filter: brightness(0) invert(1);
+}
+
 .bg-custom {
   background-color: var(--primary) !important;
 }
@@ -34,9 +38,16 @@
    TYPOGRAPHIE
 ============================ */
 
+h1,
+h2,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
+}
+
 .navbar,
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open sans", sans-serif;
 }
 
 /* ============================
@@ -106,6 +117,15 @@ section .btn-connexion {
   margin: 15% auto 0 auto;
 }
 
+/* Bouton des menus */
+@media (max-width: 768px) {
+  .btn-mobile-sm {
+    padding: 4px 8px; /* réduit la hauteur */
+    font-size: 0.8rem; /* texte plus petit */
+    line-height: 1.1; /* hauteur interne réduite */
+  }
+}
+
 /* ============================
    NAVBAR MOBILE
 ============================ */
@@ -143,10 +163,6 @@ section .btn-connexion {
 /* ============================
    DIVERS
 ============================ */
-
-/* main {
-  background-color: var(--light);
-} */
 
 .border-vg {
   border-color: var(--primary) !important;

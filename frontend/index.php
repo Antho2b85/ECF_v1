@@ -1,86 +1,12 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Vite & Gourmand propose des menus variés, commandes en ligne, service traiteur et gestion d’événements à Bordeaux. Simple, rapide et gourmand."
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/variable.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <title>Vite & Gourmand – Menus, Commandes et Traiteur à Bordeaux</title>
-  </head>
+  <?php include './components/head.php';
+?>
   <body>
-    <header>
-      <!-- Navbar de Bootstrap -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-custom">
-        <div class="container-fluid">
-          <a class="navbar-brand brand-title" href="#">Vite & Gourmand</a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Accueil</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/"
-                  >Galerie</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Nos menus & Évenements</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >A propos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Contacts</a
-                >
-              </li>
-            </ul>
-            <div>
-              <button type="button" class="btn btn-connexion">Connexion</button>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!-- End navbar -->
+    <?php include './components/navbar-accueil.php';
+?>
+    
+    <main>
       <div class="position-relative hero" style="height: 350px">
         <img
           src="/assets/nikolayfrolochkin-buffet-3085114_1920.jpg"
@@ -106,9 +32,7 @@
           </button>
         </div>
       </div>
-    </header>
 
-    <main>
       <section class="container py-5">
         <!-- TITRE PRINCIPAL -->
         <div class="d-flex align-items-center justify-content-center mb-5">
