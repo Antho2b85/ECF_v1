@@ -17,7 +17,7 @@
         </button>
         
         <!-- titre version mobile et desktop à gauche -->
-        <a class="navbar-brand mx-auto mx-lg-0 order-2 order-lg-1" href="#">Vite & Gourmand</a>
+        <a class="navbar-brand mx-auto mx-lg-0 order-2 order-lg-1" href="#"><?php echo $title;?></a>
         
 
         <!-- Icône de profil à droite (mobile only) -->
@@ -30,7 +30,7 @@
  <div class="collapse navbar-collapse order-lg-2" id="navbarMenus">
 
   <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
-   <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
+   <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Galerie</a></li>
         <li class="nav-item"><a class="nav-link fw-bold text-decoration-underline active" href="#">Nos Menus & événements</a></li>
         <li class="nav-item"><a class="nav-link" href="#">A propos</a></li>

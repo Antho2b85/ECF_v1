@@ -1,5 +1,5 @@
 <footer class="bg-custom text-white py-4">
-  <div class="container d-flex flex-column" style="min-height: 130px">
+  <div class="container d-flex flex-column" style="min-height: 100px">
     <!-- Top -->
     <h2 class="text-center mb-3">Nos horaires</h2>
 

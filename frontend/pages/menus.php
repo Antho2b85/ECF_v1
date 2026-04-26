@@ -2,8 +2,11 @@
 ?>
 
 <body>
-
-    <?php include '../components/navbar-menusG.php';
+    
+    <?php
+    $title = "Vite & Gourmand";
+    $activePage = 'menuG';
+    include '../components/navbar-accueil.php';
     ?>
 
     <main class="container-fluid p-0">
@@ -14,24 +17,92 @@
         </div>
         <hr class="my-1">
 
-        <!-- Filtres (mobile)-->
-        <div class="pt-1 bg-light position-relative bg-custom-light d-lg-none">
-            <h5 class="mb-3">Filtres</h5>
-            <!-- Icone (mobile) -->
+   <!-- Filtres (mobile) -->
+<div class="d-lg-none mb-3 bg-custom-light rounded-4">
 
-            <i class="bi bi-chevron-down position-absolute end-0 me-2 d-lg-none icon-filtre" style="top: 10px;"></i>
+    <!-- Ligne 1 : Titre + Chevron -->
+    <div class="d-flex align-items-center justify-content-between px-3 pt-3 pb-2"
+         data-bs-toggle="collapse"
+         data-bs-target="#filtresMobile"
+         aria-expanded="false"
+         aria-controls="filtresMobile"
+         style="cursor: pointer;">
+        <h5 class="fw-bold mb-0">Filtres</h5>
+        <i class="bi bi-chevron-down icon-filtre" style="transition: transform 0.25s; font-size: 1.1rem;"></i>
+    </div>
+
+    <hr class="mx-3 my-0">
+
+    <!-- Ligne 2 : Prix + Bouton Affiner -->
+    <div class="d-flex align-items-center justify-content-between px-3 py-2">
+        <span class="text-muted small">Prix maximum : jusqu'à 50€</span>
+    </div>
 
 
-            <div class="row align-items-center">
-                <div class="col">
-                    <span class="text-muted">Prix maximum : jusqu'à 50€</span>
+    <!-- Contenu déroulant -->
+    <div class="collapse" id="filtresMobile">
+        <div class="px-3 pb-3">
+            <hr>
+
+            <div>
+                <h5 class="small">
+                    <strong>Prix maximum:</strong>
+                    <span class="ms-4">Jusqu'à 50€</span>
+                </h5>
+                <input type="range" class="form-range" min="0" max="100" value="50">
+            </div>
+
+            <div>
+                <h5 class="small fw-bold mt-3">Fourchette de prix:</h5>
+                <div class="d-flex align-items-center gap-2">
+                    <input type="number" class="form-control bg-white" placeholder="Min">
+                    <span>→</span>
+                    <input type="number" class="form-control bg-white" placeholder="Max">
                 </div>
+                <hr>
+            </div>
 
-                <div class="col-auto">
-                    <button class="btn bg-custom btn-connexion btn-outline-success btn-sm d-lg-none rounded-5 btn-mobile-sm">Affiner</button>
+            <div>
+                <h5 class="small fw-bold mt-3">Thémes:</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="m-theme1">
+                    <label class="form-check-label" for="m-theme1">Classique</label>
                 </div>
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="m-theme2">
+                    <label class="form-check-label" for="m-theme2">Noël</label>
+                </div>
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="m-theme3">
+                    <label class="form-check-label" for="m-theme3">Pâques</label>
+                </div>
+                <hr>
+            </div>
+
+            <div>
+                <h5 class="small fw-bold mt-3">Régime:</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="m-regime1">
+                    <label class="form-check-label" for="m-regime1">Classique</label>
+                </div>
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="m-regime2">
+                    <label class="form-check-label" for="m-regime2">Végétarien</label>
+                </div>
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="m-regime3">
+                    <label class="form-check-label" for="m-regime3">Vegan</label>
+                </div>
+                <hr>
+            </div>
+
+            <div>
+                <h5 class="small fw-bold mt-3">Nombres de personnes:</h5>
+                <input type="number" class="form-control bg-white" placeholder="Minimum">
             </div>
         </div>
+    </div>
+</div>
 
         <!-- Navlist -->
         <div class="d-flex justify-content-center gap-4 my-3">
@@ -41,218 +112,224 @@
     <a href="#" class="text-vg-primary">Fêtes</a>
 </div>
 
+
 <!-- Container de menus -->
-<div class="container my-4">
+<div class="container-fluid my-4">
+    <div class="row">
 
-<!-- Menu1 -->
-    <div class="card border-0 rounded-4 p-3 shadow-sm bg-custom-light">
-        <div class="row g-3 align-items-center">
+        <!-- Colonne gauche filtres (only desktop) -->
+        <div class="col-lg-2 d-none d-lg-block bg-custom-light rounded-4">
+            <h5 class="fw-bold mt-2">Filtres</h5>
+            <hr class="col-12">
 
-            <!-- Image -->
-            <div class="col-md-5">
-                <img 
-                    src="/assets/francky21-food-8192348_1920.jpg"
-                    class="img-fluid rounded-4 w-100"
-                    alt="Menu gourmand">
+            <div>
+                <h5 class="small">
+                    <strong>Prix maximum:</strong>
+                    <span class="ms-4">Jusqu'à 50€</span>
+                </h5>
+                <input type="range" min="0" max="100" value="50">
             </div>
 
-            <!-- Texte -->
-            <div class="col-md-7">
+            <div>
+                <h5 class="small fw-bold mt-3">Fourchette de prix:</h5>
+                <div class="d-flex align-items-center gap-2">
+                    <input type="number" class="form-control bg-white" placeholder="Min">
+                    <span>→</span>
+                    <input type="number" class="form-control bg-white" placeholder="Max">
+                </div>
+                <hr>
+            </div>
 
-                <h3 class="text-vg-primary mb-2">
-                    Menu Gourmand
-                </h3>
+            <div>
+                <h5 class="small fw-bold mt-3">Thémes:</h5>
 
-                <hr class="mt-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="theme1">
+                    <label class="form-check-label" for="theme1">Classique</label>
+                </div>
 
-                <p class="mb-1">
-                    <strong>Thèmes:</strong> Événements
-                </p>
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="theme2">
+                    <label class="form-check-label" for="theme2">Noël</label>
+                </div>
 
-                <p class="mb-3">
-                    <strong>Régime:</strong> Classique
-                </p>
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="theme3">
+                    <label class="form-check-label" for="theme3">Pâques</label>
+                </div>
 
-                <p class="mb-1">
-                    Pour 2 personnes minimum
-                </p>
+                <hr>
+            </div>
 
-                <p class="mb-4">
-                    À partir de <strong>25€</strong> / personne
-                </p>
+            <div>
+                <h5 class="small fw-bold mt-3">Régime:</h5>
 
-                <div class="d-flex justify-content-between align-items-center">
-                    <p class="fst-italic mb-0">
-                        Stock: 6 disponibles
-                    </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="regime1">
+                    <label class="form-check-label" for="regime1">Classique</label>
+                </div>
 
-                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">
-                        Voir le détail
-                    </a>
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="regime2">
+                    <label class="form-check-label" for="regime2">Végétarien</label>
+                </div>
+
+                <div class="form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="regime3">
+                    <label class="form-check-label" for="regime3">Vegan</label>
+                </div>
+
+                <hr>
+            </div>
+
+            <div>
+                <h5 class="small fw-bold mt-3">Nombres de personnes:</h5>
+                <div class="d-flex align-items-center gap-2">
+                    <input type="number" class="form-control bg-white" placeholder="Minimum">
+                </div>
+            </div>
+        </div>
+
+        <!-- COLONNE MENUS (2 colonnes en desktop) -->
+        <div class="col-12 col-lg-10">
+
+            <!-- LIGNE 1 : Menu 1 + Menu 3 -->
+            <div class="row g-3">
+
+                <!-- Menu 1 -->
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 border-0 rounded-4 p-3 shadow-sm bg-custom-light">
+                        <div class="row g-3 align-items-center">
+
+                            <div class="col-12 col-md-5">
+                                <img src="/assets/francky21-food-8192348_1920.jpg"
+                                     class="img-fluid rounded-4 w-100"
+                                     alt="Menu gourmand">
+                            </div>
+
+                            <div class="col-12 col-md-7">
+                                <h3 class="text-vg-primary mb-2 text-lg-center">Menu Gourmand</h3>
+                                <hr class="mt-0">
+
+                                <p class="mb-1"><strong>Thèmes:</strong> Événements</p>
+                                <p class="mb-3"><strong>Régime:</strong> Classique</p>
+                                <p class="mb-1">Pour 2 personnes minimum</p>
+                                <p class="mb-4">À partir de <strong>25€</strong> / personne</p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fst-italic mb-0">Stock: 6 disponibles</p>
+                                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu 3 -->
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 border-0 rounded-4 p-3 shadow-sm bg-custom-light">
+                        <div class="row g-3 align-items-center">
+
+                            <div class="col-md-5">
+                                <img src="/assets/emilia_baczynska-happy-easter-4154655_1920.jpg"
+                                     class="img-fluid rounded-4 w-100"
+                                     alt="Menu de Pâques">
+                            </div>
+
+                            <div class="col-md-7">
+                                <h3 class="text-vg-primary mb-2 text-lg-center">Menu de Pâques</h3>
+                                <hr class="mt-0">
+
+                                <p class="mb-1"><strong>Thèmes:</strong> Pâques</p>
+                                <p class="mb-3"><strong>Régime:</strong> Classique</p>
+                                <p class="mb-1">Pour 4 personnes minimum</p>
+                                <p class="mb-4">À partir de <strong>30€</strong> / personne</p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fst-italic mb-0">
+                                        Réservation 2 jours <br> à l'avance
+                                    </p>
+                                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LIGNE 2 : Menu 2 + Menu 4 -->
+            <div class="row g-3 mt-3">
+
+                <!-- Menu 2 -->
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 border-0 rounded-4 p-3 shadow-sm bg-custom-light">
+                        <div class="row g-3 align-items-center">
+
+                            <div class="col-md-5">
+                                <img src="/assets/kiberstalker-ai-generated-8346161_1920.jpg"
+                                     class="img-fluid rounded-4 w-100"
+                                     alt="Buffet de Noël">
+                            </div>
+
+                            <div class="col-md-7">
+                                <h3 class="text-vg-primary mb-2 text-lg-center">Buffet de Noël</h3>
+                                <hr class="mt-0">
+
+                                <p class="mb-1"><strong>Thèmes:</strong> Noël</p>
+                                <p class="mb-3"><strong>Régime:</strong> Classique</p>
+                                <p class="mb-1">Pour 6 personnes minimum</p>
+                                <p class="mb-4">À partir de <strong>40€</strong> / personne</p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fst-italic mb-0">Stock: 8 disponibles</p>
+                                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu 4 -->
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 border-0 rounded-4 p-3 shadow-sm bg-custom-light">
+                        <div class="row g-3 align-items-center">
+
+                            <div class="col-md-5">
+                                <img src="/assets/u_s3w4e9hqv7-video-9825949_1920.jpg"
+                                     class="img-fluid rounded-4 w-100"
+                                     alt="Réceptions et séminaire">
+                            </div>
+
+                            <div class="col-md-7">
+                                <h3 class="text-vg-primary mb-2 text-lg-center">Réceptions et séminaire</h3>
+                                <hr class="mt-0">
+
+                                <p class="mb-1"><strong>Thèmes:</strong> Réception</p>
+                                <p class="mb-3"><strong>Régime:</strong> Varié</p>
+                                <p class="mb-1">Pour 10 personnes minimum</p>
+                                <p class="mb-4">À partir de <strong>20€</strong> / personne</p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fst-italic mb-0">Idéal pour mariage</p>
+                                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
         </div>
+
     </div>
-
-    <!-- Menu2 -->  <div class="card border-0 rounded-4 p-3 shadow-sm bg-custom-light mt-3">
-        <div class="row g-3 align-items-center">
-
-            <!-- Image -->
-            <div class="col-md-5">
-                <img 
-                    src="/assets/kiberstalker-ai-generated-8346161_1920.jpg"
-                    class="img-fluid rounded-4 w-100"
-                    alt="Buffet de Noël">
-            </div>
-
-            <!-- Texte -->
-            <div class="col-md-7">
-
-                <h3 class="text-vg-primary mb-2">
-                    Buffet de Noël
-                </h3>
-
-                <hr class="mt-0">
-
-                <p class="mb-1">
-                    <strong>Thèmes:</strong> Noël
-                </p>
-
-                <p class="mb-3">
-                    <strong>Régime:</strong> Classique
-                </p>
-
-                <p class="mb-1">
-                    Pour 6 personnes minimum
-                </p>
-
-                <p class="mb-4">
-                    À partir de <strong>40€</strong> / personne
-                </p>
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <p class="fst-italic mb-0">
-                        Stock: 8 disponibles
-                    </p>
-
-                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">
-                        Voir le détail
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Menu3 -->
-     <div class="card border-0 rounded-4 p-3 shadow-sm bg-custom-light mt-3">
-        <div class="row g-3 align-items-center">
-
-            <!-- Image -->
-            <div class="col-md-5">
-                <img 
-                    src="/assets/emilia_baczynska-happy-easter-4154655_1920.jpg"
-                    class="img-fluid rounded-4 w-100"
-                    alt="Menu de Pâques">
-            </div>
-
-            <!-- Texte -->
-            <div class="col-md-7">
-
-                <h3 class="text-vg-primary mb-2">
-                    Menu de Pâques
-                </h3>
-
-                <hr class="mt-0">
-
-                <p class="mb-1">
-                    <strong>Thèmes:</strong> Pâques
-                </p>
-
-                <p class="mb-3">
-                    <strong>Régime:</strong> Classique
-                </p>
-
-                <p class="mb-1">
-                    Pour 4 personnes minimum
-                </p>
-
-                <p class="mb-4">
-                    À partir de <strong>30€</strong> / personne
-                </p>
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <p class="fst-italic mb-0">
-                       Réservation 2 jours <br>
-                       à l'avance
-                    </p>
-
-                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">
-                        Voir le détail
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-   <!-- Menu4 -->
-     <div class="card border-0 rounded-4 p-3 shadow-sm bg-custom-light mt-3">
-        <div class="row g-3 align-items-center">
-
-            <!-- Image -->
-            <div class="col-md-5">
-                <img 
-                    src="/assets/u_s3w4e9hqv7-video-9825949_1920.jpg"
-                    class="img-fluid rounded-4 w-100"
-                    alt="Menu de Pâques">
-            </div>
-
-            <!-- Texte -->
-            <div class="col-md-7">
-
-                <h3 class="text-vg-primary mb-2">
-                    Menu de Pâques
-                </h3>
-
-                <hr class="mt-0">
-
-                <p class="mb-1">
-                    <strong>Thèmes:</strong> Réception
-                </p>
-
-                <p class="mb-3">
-                    <strong>Régime:</strong> Varié
-                </p>
-
-                <p class="mb-1">
-                    Pour 10 personnes minimum
-                </p>
-
-                <p class="mb-4">
-                    À partir de <strong>20€</strong> / personne
-                </p>
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <p class="fst-italic mb-0">
-                        Idéal pour mariage
-                    </p>
-
-                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">
-                        Voir le détail
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
 </div>
+
 
     </main>
 
@@ -266,5 +343,7 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+            <script src="/JS/main.js"></script>
 
 </body>
