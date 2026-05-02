@@ -27,6 +27,12 @@
   background-color: var(--light) !important;
 }
 
+.bg-custom-green {
+  background-color: #27ae60 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .bg-custom .navbar-brand,
 .bg-custom .nav-link,
 .bg-custom .nav-link.active,
@@ -37,6 +43,11 @@
 /* ============================
    TYPOGRAPHIE
 ============================ */
+
+.navbar .nav-link.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 h1,
 h2,
@@ -54,6 +65,12 @@ p {
    BOUTONS
 ============================ */
 
+.dropdown-menu {
+  left: 20px !important;
+  right: auto !important;
+  transform: translateX(0) !important;
+}
+
 .btn {
   background-color: var(--light);
   color: var(--dark) !important;
@@ -64,6 +81,11 @@ p {
 .btn-connexion:hover {
   background-color: #ffffff !important;
   color: var(--primary) !important;
+}
+
+.dropdown-menu .btn {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 /* Boutons dans les sections */
@@ -105,6 +127,15 @@ section .btn-connexion {
 }
 
 /* Ajustement mobile */
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
 @media (max-width: 767.98px) {
   .hero-text {
     top: 2%;
@@ -170,4 +201,13 @@ section .btn-connexion {
 
 .decalage-bas {
   margin-top: 60px;
+}
+
+/* ==================== 
+   Icone
+=======================*/
+.toggle-password {
+  right: 10px; 
+  top: 58px; 
+  cursor: pointer;
 }

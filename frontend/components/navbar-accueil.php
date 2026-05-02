@@ -1,7 +1,7 @@
 <!-- Navbar de Bootstrap -->
   <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary bg-custom">
     <div class="container-fluid">
-      <a class="navbar-brand brand-title" href="#">Vite & Gourmand</a>
+      <a class="navbar-brand brand-title" href="#"><?php echo $title ?></a>
 
       <button
         class="navbar-toggler"
@@ -17,26 +17,56 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+            <a class="nav-link <?= ($activePage === 'Accueil') ? 'active' : '' ?>" aria-current="page" href="/frontend/index.php">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Galerie</a>
+            <a class="nav-link <?= ($activePage === 'Galerie') ? 'active' : '' ?>" aria-current="page" href="/">Galerie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
+            <a class="nav-link <?= ($activePage === 'menuG') ? 'active' : '' ?>" aria-current="page" href="/frontend/pages/menus.php"
               >Nos menus & événements</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">A propos</a>
+            <a class="nav-link <?= ($activePage === 'A propos') ? 'active' : '' ?>" aria-current="page" href="#">A propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contacts</a>
+            <a class="nav-link <?= ($activePage === 'Contacts') ? 'active' : '' ?>" aria-current="page" href="#">Contacts</a>
           </li>
         </ul>
-        <div>
-          <button type="button" class="btn btn-connexion">Connexion</button>
+
+        <div class="dropdown" style="position: relative">
+          <button type="button" class="btn btn-connexion dropdown-toggle" data-bs-toggle="dropdown">Connexion/S'inscrire</button>
+<div class="dropdown-menu p-3 mt-2 bg-custom-light text-center text-md-start" data-bs-auto-close="outside" style="width: 260px;">
+        <form>
+            <div class="mb-3">
+                <label class="form-label" required>email</label>
+                <input type="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Mot de passe</label>
+                <input type="password" class="form-control">
+            </div>
+              
+            <div class="mb-2 text-center">
+            <a href="#" class="text-vg-dark text-decoration-underline">Pas encore de compte ? S'inscrire</a>
+            </div>
+
+            <div class="d-flex justify-content-center gap-2 w-100">
+            <button class="btn bg-custom btn-connexion">Connexion</button>
+            <!-- <button class="btn bg-custom btn-connexion">Inscription</button> -->
+            </div>
+
+            <div class="mt-2 text-center">
+            <a href="#" class="text-vg-dark text-decoration-underline">Mot de passe oublié</a>
+            </div>
+
+        </form>
+    </div>
         </div>
+
+
       </div>
     </div>
   </nav>
