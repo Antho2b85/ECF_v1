@@ -34,18 +34,15 @@
             <a class="nav-link <?= ($activePage === 'Contacts') ? 'active' : '' ?>" aria-current="page" href="#">Contacts</a>
           </li>
         </ul>
+
         <div class="dropdown" style="position: relative">
           <button type="button" class="btn btn-connexion dropdown-toggle" data-bs-toggle="dropdown">Connexion/S'inscrire</button>
 <div class="dropdown-menu p-3 mt-2 bg-custom-light text-center text-md-start" data-bs-auto-close="outside" style="width: 260px;">
         <form>
             <div class="mb-3">
-                <label class="form-label">Nom</label>
-                <input type="text" class="form-control">
-            </div>
 
-<div class="mb-3">
-                <label class="form-label">Prenom</label>
-                <input type="text" class="form-control">
+                <label class="form-label" required>email</label>
+                <input type="email" class="form-control">
             </div>
 
 
@@ -53,9 +50,20 @@
                 <label class="form-label">Mot de passe</label>
                 <input type="password" class="form-control">
             </div>
-<div class="d-flex justify-content-center gap-2 w-100">
-            <button class="btn bg-custom btn-connexion">Envoyer</button>
-            <button class="btn bg-custom btn-connexion">Inscription</button>
+
+              
+            <div class="mb-2 text-center">
+            <a href="#" class="text-vg-dark text-decoration-underline">Pas encore de compte ? S'inscrire</a>
+            </div>
+
+            <div class="d-flex justify-content-center gap-2 w-100">
+            <button class="btn bg-custom btn-connexion">Connexion</button>
+            <!-- <button class="btn bg-custom btn-connexion">Inscription</button> -->
+            </div>
+
+            <div class="mt-2 text-center">
+            <a href="#" class="text-vg-dark text-decoration-underline">Mot de passe oublié</a>
+
             </div>
 
         </form>

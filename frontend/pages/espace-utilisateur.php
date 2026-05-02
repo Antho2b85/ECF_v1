@@ -1,11 +1,12 @@
-<?php include '../components/head.php';
+<?php require '../components/head.php';
 ?>
 
 <body>
     
     <?php
     $title = "Tableau de bord";
-    include '../components/navbar-accueil.php';
+
+    require '../components/navbar-accueil.php';
     ?>
 
 <div class="container-fluid mt-2 border bg-custom-light rounded-4">
@@ -29,8 +30,8 @@
 </div>
 
 
+<div class="container-fluid rounded-4 mt-2">
 
-<div class="container-fluid bg-custom-light rounded-4 mt-2">
     
     <div class="d-flex justify-content-between align-items-center">
         
@@ -81,7 +82,8 @@
     </div>
 </div>
 
-<div class="container-fluid bg-custom-light rounded-4 pt-2 mt-2">
+
+<div class="container-fluid rounded-4 pt-2 mt-2">
     <div>
         <h5 class="fw-bold">Actions rapides</h5>
         <hr>
@@ -117,7 +119,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <?php include "../components/footer.php";
+
+    <?php require "../components/footer.php";
      ?>
 
 </body>

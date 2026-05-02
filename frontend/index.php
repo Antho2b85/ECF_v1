@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="fr">
-  <?php include './components/head.php';
+  <?php require './components/head.php';
 ?>
   <body>
     <?php 
     $title = "Vite & Gourmand";
     $activePage = "Accueil";
-    include './components/navbar-accueil.php';
+
+    require './components/navbar-accueil.php';
 ?>
     
     <main>
@@ -208,7 +209,8 @@
     ></script>
 
     <?php 
-    include './components/footer.php';
+
+    require './components/footer.php';
     ?>
 
   </body>

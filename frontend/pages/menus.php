@@ -1,4 +1,4 @@
-<?php include '../components/head.php';
+<?php require '../components/head.php';
 ?>
 
 <body>
@@ -6,7 +6,8 @@
     <?php
     $title = "Vite & Gourmand";
     $activePage = 'menuG';
-    include '../components/navbar-accueil.php';
+
+    require '../components/navbar-accueil.php';
     ?>
 
     <main class="container-fluid p-0">
@@ -33,23 +34,23 @@
 
     <hr class="mx-3 my-0">
 
-    <!-- Ligne 2 : Prix + Bouton Affiner -->
+
+    <!-- Ligne 2 : Prix-->
     <div class="d-flex align-items-center justify-content-between px-3 py-2">
-        <span class="text-muted small">Prix maximum : jusqu'à 50€</span>
+        <!-- <span class="text-muted small">Prix maximum : jusqu'à 50€</span> -->
     </div>
 
 
     <!-- Contenu déroulant -->
     <div class="collapse" id="filtresMobile">
         <div class="px-3 pb-3">
-            <hr>
 
             <div>
                 <h5 class="small">
                     <strong>Prix maximum:</strong>
-                    <span class="ms-4">Jusqu'à 50€</span>
+                    <span class="ms-4" id="moovePrice">Jusqu'à 50€</span>
                 </h5>
-                <input type="range" class="form-range" min="0" max="100" value="50">
+                <input type="range" class="form-range" id="mooveCursor" min="0" max="100" step="10" value="50">
             </div>
 
             <div>
@@ -57,7 +58,7 @@
                 <div class="d-flex align-items-center gap-2">
                     <input type="number" class="form-control bg-white" placeholder="Min">
                     <span>→</span>
-                    <input type="number" class="form-control bg-white" placeholder="Max">
+                    <input type="number" class="form-control bg-white" id="moovePriceMax" placeholder="Max">
                 </div>
                 <hr>
             </div>
@@ -125,9 +126,9 @@
             <div>
                 <h5 class="small">
                     <strong>Prix maximum:</strong>
-                    <span class="ms-4">Jusqu'à 50€</span>
+                    <span class="ms-4" id="moovePriceDesktop">Jusqu'à 50€</span>
                 </h5>
-                <input type="range" min="0" max="100" value="50">
+                <input type="range" class="form-range" id="mooveCursorDesktop" min="0" max="100" step="10" value="50">
             </div>
 
             <div>
@@ -135,7 +136,7 @@
                 <div class="d-flex align-items-center gap-2">
                     <input type="number" class="form-control bg-white" placeholder="Min">
                     <span>→</span>
-                    <input type="number" class="form-control bg-white" placeholder="Max">
+                    <input type="number" class="form-control bg-white" id="moovePriceMaxDesktop" placeholder="Max">
                 </div>
                 <hr>
             </div>

@@ -202,3 +202,12 @@ section .btn-connexion {
 .decalage-bas {
   margin-top: 60px;
 }
+
+/* ==================== 
+   Icone
+=======================*/
+.toggle-password {
+  right: 10px; 
+  top: 58px; 
+  cursor: pointer;
+}
