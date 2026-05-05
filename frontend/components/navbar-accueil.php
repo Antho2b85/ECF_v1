@@ -53,7 +53,7 @@
 
               
             <div class="mb-2 text-center">
-            <a href="#" class="text-vg-dark text-decoration-underline">Pas encore de compte ? S'inscrire</a>
+            <a href="/frontend/pages/create-account.php" class="text-vg-dark text-decoration-underline">Pas encore de compte ? S'inscrire</a>
             </div>
 
             <div class="d-flex justify-content-center gap-2 w-100">
