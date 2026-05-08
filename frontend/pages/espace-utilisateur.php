@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if(empty($_SESSION['csrf_token'])){
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+
+
 <?php require '../components/head.php';
 ?>
 
@@ -20,7 +29,7 @@
 
         <!-- Colonne image -->
         <div class="col-auto py-3 pe-3">
-            <img src="/assets/ernestflowerss-boy-8847075_1920.jpg"
+            <img src="/ECF_V1/assets/ernestflowerss-boy-8847075_1920.jpg"
                  class="img-fluid rounded-circle"
                  style="width: 120px; height: 120px; object-fit: cover;"
                  alt="Photo de profil">

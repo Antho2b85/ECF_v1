@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if(empty($_SESSION['csrf_token'])){
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+
+
 <!doctype html>
 <html lang="fr">
   <?php require './components/head.php';
@@ -13,7 +22,7 @@
     <main>
       <div class="position-relative hero" style="height: 350px">
         <img
-          src="/assets/nikolayfrolochkin-buffet-3085114_1920.jpg"
+          src="/ECF_V1/assets/nikolayfrolochkin-buffet-3085114_1920.jpg"
           class="w-100 h-100 object-fit-cover"
           alt="Hero"
         />
@@ -55,7 +64,7 @@
               <!-- IMAGE 1 -->
               <div class="col-6 col-md-6 order-1 d-flex">
                 <img
-                  src="/assets/stocksnap-food-2616326_1920.jpg"
+                  src="/ECF_V1/assets/stocksnap-food-2616326_1920.jpg"
                   class="img-fluid rounded img-equal-mobile"
                   alt="Présentation"
                 />
@@ -82,16 +91,16 @@
                 </p>
 
                 <!-- Bouton desktop -->
-                <button class="btn btn-connexion d-none d-md-inline-block mt-3">
+                <a href="/ECF_V1/frontend/pages/menus.php" class="btn btn-connexion d-none d-md-inline-block mt-3">
                   Nos menus
-                </button>
+                </a>
               </div>
 
               <!-- BOUTON MOBILE (sous image + texte) -->
               <div class="col-12 d-md-none text-center order-3">
-                <button class="btn btn-connexion mt-3 mx-auto d-block">
+                <a href="/ECF_V1/frontend/pages/menus.php" class="btn btn-connexion mt-3 mx-auto d-block">
                   Nos menus
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -118,7 +127,7 @@
               <!-- IMAGE 2 -->
               <div class="col-6 col-md-6 order-1 d-flex">
                 <img
-                  src="/assets/sookie_cfw-buffet-617156_1920.jpg"
+                  src="/ECF_V1/assets/sookie_cfw-buffet-617156_1920.jpg"
                   class="img-fluid rounded img-equal-mobile"
                   alt="Présentation"
                 />

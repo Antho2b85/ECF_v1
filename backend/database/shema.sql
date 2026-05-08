@@ -6,6 +6,10 @@ CREATE TABLE role(
     libelle VARCHAR (50)
 );
 
+INSERT INTO role (libelle) VALUES ('admin');
+INSERT INTO role (libelle) VALUES ('employe');
+INSERT INTO role (libelle) VALUES ('client');
+
 CREATE TABLE utilisateur(
     utilisateur_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(50) NOT NULL,
@@ -19,6 +23,9 @@ CREATE TABLE utilisateur(
     role_id INT NOT NULL,
     FOREIGN KEY (role_id) REFERENCES role(role_id)
 );
+
+-- Modif varchar for password
+ALTER TABLE utilisateur MODIFY password VARCHAR(255) NOT NULL;
 
 CREATE TABLE avis(
     avis_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

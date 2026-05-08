@@ -29,8 +29,8 @@
 
 
     <!-- Chemins -->
-    <link rel="stylesheet" href="/frontend/css/variable.css">
-    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/ECF_V1/frontend/css/variable.css">
+    <link rel="stylesheet" href="/ECF_V1/frontend/css/style.css">
 
     <title>Vite & Gourmand – Menus, Commandes et Traiteur à Bordeaux</title>
   </head>

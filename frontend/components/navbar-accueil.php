@@ -1,3 +1,5 @@
+
+
 <!-- Navbar de Bootstrap -->
   <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary bg-custom">
     <div class="container-fluid">
@@ -17,13 +19,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link <?= ($activePage === 'Accueil') ? 'active' : '' ?>" aria-current="page" href="/frontend/index.php">Accueil</a>
+            <a class="nav-link <?= ($activePage === 'Accueil') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/index.php">Accueil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link <?= ($activePage === 'Galerie') ? 'active' : '' ?>" aria-current="page" href="/">Galerie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?= ($activePage === 'menuG') ? 'active' : '' ?>" aria-current="page" href="/frontend/pages/menus.php"
+            <a class="nav-link <?= ($activePage === 'menuG') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/menus.php"
               >Nos menus & événements</a
             >
           </li>
@@ -38,22 +40,23 @@
         <div class="dropdown" style="position: relative">
           <button type="button" class="btn btn-connexion dropdown-toggle" data-bs-toggle="dropdown">Connexion/S'inscrire</button>
 <div class="dropdown-menu p-3 mt-2 bg-custom-light text-center text-md-start" data-bs-auto-close="outside" style="width: 260px;">
-        <form>
+        <form action="/ECF_V1/backend/login.php" method="post">
+          <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
             <div class="mb-3">
 
-                <label class="form-label" required>email</label>
-                <input type="email" class="form-control">
+                <label class="form-label">email</label>
+                <input type="email" class="form-control" name="email" required>
             </div>
 
 
             <div class="mb-3">
                 <label class="form-label">Mot de passe</label>
-                <input type="password" class="form-control">
+                <input type="password" class="form-control" name="password" required>
             </div>
 
               
             <div class="mb-2 text-center">
-            <a href="/frontend/pages/create-account.php" class="text-vg-dark text-decoration-underline">Pas encore de compte ? S'inscrire</a>
+            <a href="/ECF_V1/frontend/pages/create-account.php" class="text-vg-dark text-decoration-underline">Pas encore de compte ? S'inscrire</a>
             </div>
 
             <div class="d-flex justify-content-center gap-2 w-100">

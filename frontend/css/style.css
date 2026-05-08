@@ -149,11 +149,11 @@ section .btn-connexion {
 }
 
 /* Bouton des menus */
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
   .btn-mobile-sm {
-    padding: 4px 8px; /* réduit la hauteur */
-    font-size: 0.8rem; /* texte plus petit */
-    line-height: 1.1; /* hauteur interne réduite */
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    line-height: 1.1;
   }
 }
 
@@ -207,7 +207,7 @@ section .btn-connexion {
    Icone
 =======================*/
 .toggle-password {
-  right: 10px; 
-  top: 58px; 
+  right: 10px;
+  top: 58px;
   cursor: pointer;
 }

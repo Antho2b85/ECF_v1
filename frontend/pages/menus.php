@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if(empty($_SESSION['csrf_token'])){
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+
+
+
 <?php require '../components/head.php';
 ?>
 
@@ -203,7 +213,7 @@
                         <div class="row g-3 align-items-center">
 
                             <div class="col-12 col-md-5">
-                                <img src="/assets/francky21-food-8192348_1920.jpg"
+                                <img src="/ECF_V1/assets/francky21-food-8192348_1920.jpg"
                                      class="img-fluid rounded-4 w-100"
                                      alt="Menu gourmand">
                             </div>
@@ -233,7 +243,7 @@
                         <div class="row g-3 align-items-center">
 
                             <div class="col-md-5">
-                                <img src="/assets/emilia_baczynska-happy-easter-4154655_1920.jpg"
+                                <img src="/ECF_V1/assets/emilia_baczynska-happy-easter-4154655_1920.jpg"
                                      class="img-fluid rounded-4 w-100"
                                      alt="Menu de Pâques">
                             </div>
@@ -270,7 +280,7 @@
                         <div class="row g-3 align-items-center">
 
                             <div class="col-md-5">
-                                <img src="/assets/kiberstalker-ai-generated-8346161_1920.jpg"
+                                <img src="/ECF_V1/assets/kiberstalker-ai-generated-8346161_1920.jpg"
                                      class="img-fluid rounded-4 w-100"
                                      alt="Buffet de Noël">
                             </div>
@@ -300,7 +310,7 @@
                         <div class="row g-3 align-items-center">
 
                             <div class="col-md-5">
-                                <img src="/assets/u_s3w4e9hqv7-video-9825949_1920.jpg"
+                                <img src="/ECF_V1/assets/u_s3w4e9hqv7-video-9825949_1920.jpg"
                                      class="img-fluid rounded-4 w-100"
                                      alt="Réceptions et séminaire">
                             </div>
@@ -345,6 +355,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-            <script src="/JS/main.js"></script>
+            <script src="/ECF_V1/JS/main.js"></script>
 
 </body>

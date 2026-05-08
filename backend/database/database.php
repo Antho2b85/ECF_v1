@@ -13,4 +13,4 @@ try {
     die('Erreur de connexion');
 }
 
-echo 'Connexion réussi !';
+// echo 'Connexion réussi !';
