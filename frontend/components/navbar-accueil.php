@@ -37,6 +37,12 @@
           </li>
         </ul>
 
+
+        <!-- Add button logout -->
+<?php if(isset($_SESSION['user_id'])): ?>
+  <a href="/ECF_V1/backend/logout.php" class="btn btn-connexion mx-5">Déconnexion</a>
+
+  <?php else: ?>
         <div class="dropdown" style="position: relative">
           <button type="button" class="btn btn-connexion dropdown-toggle" data-bs-toggle="dropdown">Connexion/S'inscrire</button>
 <div class="dropdown-menu p-3 mt-2 bg-custom-light text-center text-md-start" data-bs-auto-close="outside" style="width: 260px;">
@@ -72,6 +78,7 @@
         </form>
     </div>
         </div>
+        <?php endif; ?>
 
 
       </div>

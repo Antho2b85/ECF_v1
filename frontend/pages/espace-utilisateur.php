@@ -23,7 +23,7 @@ if(empty($_SESSION['csrf_token'])){
 
         <!-- Colonne texte -->
         <div class="col py-3">
-            <h5 class="fw-bold m-0">Bienvenue, Utilisateur !</h5><hr>
+            <h5 class="fw-bold m-0">Bienvenue, <?= htmlspecialchars($_SESSION['user_prenom']) ?>!</h5><hr>
             <p class="small text-muted mt-1 d-none d-lg-block">Ravi de vous revoir.</p>
         </div>
 
@@ -53,9 +53,9 @@ if(empty($_SESSION['csrf_token'])){
     </div>
     <hr>
     
-    <p>Nom:</p>
-    <p>Email:</p>
-    <p>Rôle:</p>
+    <p>Nom: <?= htmlspecialchars($_SESSION['user_nom']) ?></p>
+    <p>Email: <?= htmlspecialchars($_SESSION['user_email']) ?></p>
+    <p>Rôle: <?= $_SESSION['role_id'] == 1 ? 'Administrateur' : ($_SESSION['role_id'] == 2 ? 'Employé' : 'Utilisateur') ?></p>
 </div>
 
 
@@ -64,7 +64,7 @@ if(empty($_SESSION['csrf_token'])){
     <h5 class="fw-bold pt-3 small">Mes commandes:</h5><hr>
     </div>
 
-    <div class="d-flex flex-column border border-black rounded-3 mb-3">
+    <div class="d-flex flex-column border border-black rounded-3 mb-3 px-1">
         <p class="text-vg-primary">Commande #</p>
         <p>Date:</p>
         <p>Menu:</p>
@@ -77,7 +77,7 @@ if(empty($_SESSION['csrf_token'])){
         </div>
     </div>
     
- <div class="d-flex flex-column border border-black rounded-3">
+ <div class="d-flex flex-column border border-black rounded-3 px-1">
         <p class="text-vg-primary">Commande #</p>
         <p>Date:</p>
         <p>Menu:</p>
