@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if(empty($_SESSION['csrf_token'])){
+if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
@@ -12,11 +12,11 @@ if(empty($_SESSION['csrf_token'])){
   <?php require './components/head.php';
 ?>
   <body>
-    <?php 
+    <?php
     $title = "Vite & Gourmand";
-    $activePage = "Accueil";
+$activePage = "Accueil";
 
-    require './components/navbar-accueil.php';
+require './components/navbar-accueil.php';
 ?>
     
     <main>
@@ -217,10 +217,10 @@ if(empty($_SESSION['csrf_token'])){
       crossorigin="anonymous"
     ></script>
 
-    <?php 
+    <?php
 
     require './components/footer.php';
-    ?>
+?>
 
   </body>
 </html>

@@ -22,7 +22,7 @@
             <a class="nav-link <?= ($activePage === 'Accueil') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/index.php">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?= ($activePage === 'Galerie') ? 'active' : '' ?>" aria-current="page" href="/">Galerie</a>
+            <a class="nav-link <?= ($activePage === 'Galerie') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/galerie.php">Galerie</a>
           </li>
           <li class="nav-item">
             <a class="nav-link <?= ($activePage === 'menuG') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/menus.php"
@@ -33,13 +33,13 @@
             <a class="nav-link <?= ($activePage === 'A propos') ? 'active' : '' ?>" aria-current="page" href="#">A propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?= ($activePage === 'Contacts') ? 'active' : '' ?>" aria-current="page" href="#">Contacts</a>
+            <a class="nav-link <?= ($activePage === 'Contacts') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/contact.php">Contacts</a>
           </li>
         </ul>
 
 
         <!-- Add button logout -->
-<?php if(isset($_SESSION['user_id'])): ?>
+<?php if (isset($_SESSION['user_id'])): ?>
   <a href="/ECF_V1/backend/logout.php" class="btn btn-connexion mx-5">Déconnexion</a>
 
   <?php else: ?>

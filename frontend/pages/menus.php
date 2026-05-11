@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if(empty($_SESSION['csrf_token'])){
+if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
@@ -15,10 +15,10 @@ if(empty($_SESSION['csrf_token'])){
     
     <?php
     $title = "Vite & Gourmand";
-    $activePage = 'menuG';
+$activePage = 'menuG';
 
-    require '../components/navbar-accueil.php';
-    ?>
+require '../components/navbar-accueil.php';
+?>
 
     <main class="container-fluid p-0">
         <!-- Titre -->
@@ -117,10 +117,10 @@ if(empty($_SESSION['csrf_token'])){
 
         <!-- Navlist -->
         <div class="d-flex justify-content-center gap-4 my-3">
-    <a href="#" class="text-success fw-semibold text-decoration-none px-2 bg-light rounded">Tous</a>
-    <a href="#" class="text-vg-primary">Menus</a>
-    <a href="#" class="text-vg-primary">Réceptions</a>
-    <a href="#" class="text-vg-primary">Fêtes</a>
+    <span class="text-success fw-semibold text-decoration-underline px-2 bg-light rounded">Tous</span>
+    <span class="text-vg-primary">Menus</span>
+    <span class="text-vg-primary">Réceptions</span>
+    <span class="text-vg-primary">Fêtes</span>
 </div>
 
 
@@ -229,7 +229,7 @@ if(empty($_SESSION['csrf_token'])){
 
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p class="fst-italic mb-0">Stock: 6 disponibles</p>
-                                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
+                                    <a href="/ECF_v1/frontend/pages/menu-detail.php?id=1" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
                                 </div>
                             </div>
 
@@ -261,7 +261,7 @@ if(empty($_SESSION['csrf_token'])){
                                     <p class="fst-italic mb-0">
                                         Réservation 2 jours <br> à l'avance
                                     </p>
-                                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
+                                    <a href="/ECF_V1/frontend/pages/menu-detail.php?id=2" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
                                 </div>
                             </div>
 
@@ -296,7 +296,7 @@ if(empty($_SESSION['csrf_token'])){
 
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p class="fst-italic mb-0">Stock: 8 disponibles</p>
-                                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
+                                    <a href="/ECF_V1/frontend/pages/menu-detail.php?id=3" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
                                 </div>
                             </div>
 
@@ -326,7 +326,7 @@ if(empty($_SESSION['csrf_token'])){
 
                                 <div class="d-flex justify-content-between align-items-center">
                                     <p class="fst-italic mb-0">Idéal pour mariage</p>
-                                    <a href="#" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
+                                    <a href="/ECF_V1/frontend/pages/menu-detail.php?id=4" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
                                 </div>
                             </div>
 
@@ -347,7 +347,7 @@ if(empty($_SESSION['csrf_token'])){
 <!-- Footer -->
  <?php
  include '../components/footer.php';
- ?>
+?>
  
 
     <script
