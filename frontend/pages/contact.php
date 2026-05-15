@@ -6,8 +6,6 @@ if (empty($_SESSION['csrf_token'])) {
 }
 ?>
 
-
-
 <?php require '../components/head.php';
 ?>
 
@@ -65,7 +63,7 @@ require '../components/navbar-accueil.php';
           
                 <div class="my-4">
                     <label class="form-label fw-semibold ps-1" for="description">Description:</label>
-                    <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="6" required></textarea>
                 </div>
 
                 <div class="my-4">

@@ -40,8 +40,7 @@ require './components/navbar-accueil.php';
             généreuse et authentique
           </p>
 
-          <button type="button" class="btn btn-connexion mt-3 mt-lg-5">
-            Réserver
+         <a href="/ECF_V1/frontend/pages/commande.php" class="btn btn-connexion mt-3 mt-lg-5">Reserver</a>
           </button>
         </div>
       </div>
@@ -76,8 +75,6 @@ require './components/navbar-accueil.php';
               >
                 <p>
                   Bienvenue sur le site de Vite & Gourmand. <br />
-                  <!-- Julie et José vous invitent à découvrir une cuisine généreuse,
-                  authentique et préparée avec passion. -->
                 </p>
                 <p>
                   Nous mettons tout notre savoir-faire au service de vos
@@ -145,16 +142,12 @@ require './components/navbar-accueil.php';
                 </p>
 
                 <!-- Bouton desktop -->
-                <button class="btn btn-connexion d-none d-md-inline-block mt-3">
-                  Galerie
-                </button>
+                <a href="/ECF_V1/frontend/pages/galerie.php" class="btn btn-connexion d-none d-md-inline-block mt-3">Galerie</a>
               </div>
 
               <!-- BOUTON MOBILE (sous image + texte) -->
               <div class="col-12 d-md-none text-center order-3">
-                <button class="btn btn-connexion mt-3 mx-auto d-block">
-                  Galerie
-                </button>
+                <a href="/ECF_V1/frontend/pages/galerie.php" class="btn btn-connexion mt-3">Galerie</a>
               </div>
             </div>
           </div>

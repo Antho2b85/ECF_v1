@@ -37,7 +37,7 @@
             <?php elseif (isset($_SESSION['user_id'])): ?>
             <a class="nav-link <?= ($activePage === 'Mon espace') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/espace-utilisateur.php">Mon espace</a>
             <?php else: ?>
-            <a class="nav-link" href="#">A propos</a>
+            <a class="nav-link <?= ($activePage === 'A propos') ? 'active' : '' ?>" href="/ECF_V1/frontend/pages/a-propos.php">A propos</a>
             <?php endif; ?>
           </li>
           <li class="nav-item">

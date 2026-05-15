@@ -44,15 +44,15 @@ require '../components/navbar-accueil.php';
 
     <div class="row">
 <div class="col-12 col-md-12 d-flex ">
-    <label for="client" class="fw-bold pt-3 pe-3">Email:</label>
-    <input type="text" id="client" class="form-control">
+    <label for="email" class="fw-bold pt-3 pe-3">Email:</label>
+    <input type="text" id="email" class="form-control">
 </div>
 </div>
 
 <div class="row">
     <div class="col-12 col-md-12 d-flex  mt-3">
-        <label for="client" class="fw-bold pt-3 text-nowrap pe-2">Mot de passe:</label>
-        <input type="text" id="client" class="form-control">
+        <label for="password" class="fw-bold pt-3 text-nowrap pe-2">Mot de passe:</label>
+        <input type="password" id="password" class="form-control">
     </div>
     
 </div>
@@ -207,20 +207,6 @@ require '../components/navbar-accueil.php';
 </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <?php

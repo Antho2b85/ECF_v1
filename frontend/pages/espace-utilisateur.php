@@ -6,7 +6,6 @@ if (empty($_SESSION['csrf_token'])) {
 }
 ?>
 
-
 <?php require '../components/head.php';
 ?>
 

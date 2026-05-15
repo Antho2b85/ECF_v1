@@ -6,8 +6,6 @@ if (empty($_SESSION['csrf_token'])) {
 }
 ?>
 
-
-
 <?php require '../components/head.php';
 ?>
 
@@ -47,7 +45,6 @@ require '../components/navbar-accueil.php';
 
     <!-- Ligne 2 : Prix-->
     <div class="d-flex align-items-center justify-content-between px-3 py-2">
-        <!-- <span class="text-muted small">Prix maximum : jusqu'à 50€</span> -->
     </div>
 
 
@@ -341,14 +338,12 @@ require '../components/navbar-accueil.php';
     </div>
 </div>
 
-
     </main>
 
 <!-- Footer -->
  <?php
  include '../components/footer.php';
 ?>
- 
 
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

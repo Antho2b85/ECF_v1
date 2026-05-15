@@ -24,6 +24,10 @@ CREATE TABLE utilisateur(
     FOREIGN KEY (role_id) REFERENCES role(role_id)
 );
 
+-- Add log for utilisateur
+INSERT INTO utilisateur (nom, prenom, telephone, email, adresse_postale, password, role_id)
+VALUES ('Pascal', 'Paoli', '0620304050', 'pascal.paoli@email.com', '20218 Morosaglia', '$2y$10$n.WiY/tPpVV5megYInkFsuA8F9YhSbgD4Vns77C3Tqh/k1pijIcWq', 3);
+
 -- Add log for employé
 INSERT INTO utilisateur (nom, prenom, telephone, email, adresse_postale, password, role_id)
 VALUES ('Dupont', 'Marie', '0612345678', 'employe@viteetgourmand.fr', '1 rue de Bordeaux', '$2y$10$CfLKGhCmbPuVlY2svFF.K.1XS9dy8y9DNX.3fCwYlwOrv1kTBy.3m', 2);
