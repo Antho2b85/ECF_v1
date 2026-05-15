@@ -30,7 +30,15 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link <?= ($activePage === 'A propos') ? 'active' : '' ?>" aria-current="page" href="#">A propos</a>
+            <?php if (isset($_SESSION['role_id']) && $_SESSION['role_id'] == 1): ?>
+            <a class="nav-link <?= ($activePage === 'Espace administrateur') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/espace-admin.php">Espace administrateur</a>
+            <?php elseif (isset($_SESSION['role_id']) && $_SESSION['role_id'] == 2): ?>
+            <a class="nav-link <?= ($activePage === 'Espace employé') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/espace-employe.php">Espace employé</a>
+            <?php elseif (isset($_SESSION['user_id'])): ?>
+            <a class="nav-link <?= ($activePage === 'Mon espace') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/espace-utilisateur.php">Mon espace</a>
+            <?php else: ?>
+            <a class="nav-link" href="#">A propos</a>
+            <?php endif; ?>
           </li>
           <li class="nav-item">
             <a class="nav-link <?= ($activePage === 'Contacts') ? 'active' : '' ?>" aria-current="page" href="/ECF_V1/frontend/pages/contact.php">Contacts</a>
@@ -40,11 +48,11 @@
 
         <!-- Add button logout -->
 <?php if (isset($_SESSION['user_id'])): ?>
-  <a href="/ECF_V1/backend/logout.php" class="btn btn-connexion mx-5">Déconnexion</a>
+  <a href="/ECF_V1/backend/logout.php" class="btn btn-connexion bg-custom-light mx-5">Déconnexion</a>
 
   <?php else: ?>
-        <div class="dropdown" style="position: relative">
-          <button type="button" class="btn btn-connexion dropdown-toggle" data-bs-toggle="dropdown">Connexion/S'inscrire</button>
+        <div class="dropdown dropdown-navbar">
+          <button type="button" class="btn btn-connexion bg-custom-light dropdown-toggle" data-bs-toggle="dropdown">Connexion/S'inscrire</button>
 <div class="dropdown-menu p-3 mt-2 bg-custom-light text-center text-md-start" data-bs-auto-close="outside" style="width: 260px;">
         <form action="/ECF_V1/backend/login.php" method="post">
           <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
@@ -67,7 +75,6 @@
 
             <div class="d-flex justify-content-center gap-2 w-100">
             <button class="btn bg-custom btn-connexion">Connexion</button>
-            <!-- <button class="btn bg-custom btn-connexion">Inscription</button> -->
             </div>
 
             <div class="mt-2 text-center">

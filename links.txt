@@ -1,0 +1,11 @@
+Log pour utilisateur :
+email = pascal.paoli@email.com
+MDP = Morosaglia123!
+
+Log pour employé :
+email = employe@viteetgourmand.fr
+MDP = Employe123!
+
+Log pour admin :
+email = admin@viteetgourmand.fr
+MDP = Administrateur123!

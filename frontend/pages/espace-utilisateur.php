@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if(empty($_SESSION['csrf_token'])){
+if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
@@ -14,9 +14,10 @@ if(empty($_SESSION['csrf_token'])){
     
     <?php
     $title = "Tableau de bord";
+$activePage = 'Mon espace';
 
-    require '../components/navbar-accueil.php';
-    ?>
+require '../components/navbar-accueil.php';
+?>
 
 <div class="container-fluid mt-2 border bg-custom-light rounded-4">
     <div class="row align-items-center">
@@ -99,7 +100,7 @@ if(empty($_SESSION['csrf_token'])){
     </div>
 
 <div class="mb-2 pb-2 d-flex gap-3 justify-content-lg-between">
-    <button class="btn bg-custom-green btn-connexion" type="button">Voir tous les menus</button>
+    <a href="/ECF_V1/frontend/pages/menus.php" class="btn bg-custom-green btn-connexion">Voir tous les menus</a>
     <button class="btn bg-custom-green btn-connexion" type="button">Nouvelle commande</button>
 </div>
 
@@ -112,6 +113,6 @@ if(empty($_SESSION['csrf_token'])){
 
 
     <?php require "../components/footer.php";
-     ?>
+?>
 
 </body>

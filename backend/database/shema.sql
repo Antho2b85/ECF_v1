@@ -24,6 +24,15 @@ CREATE TABLE utilisateur(
     FOREIGN KEY (role_id) REFERENCES role(role_id)
 );
 
+-- Add log for employé
+INSERT INTO utilisateur (nom, prenom, telephone, email, adresse_postale, password, role_id)
+VALUES ('Dupont', 'Marie', '0612345678', 'employe@viteetgourmand.fr', '1 rue de Bordeaux', '$2y$10$CfLKGhCmbPuVlY2svFF.K.1XS9dy8y9DNX.3fCwYlwOrv1kTBy.3m', 2);
+
+-- Add log for Admin
+INSERT INTO utilisateur (nom, prenom, telephone, email, adresse_postale, password, role_id)
+VALUES ('Doe', 'John', '0622546688', 'admin@viteetgourmand.fr', '1 rue de Bordeaux', '$2y$10$fQmplAbkJLXq/T8fxRwEWOcbuRAbpPQbdEBtjjYtTfVpsBdM7eAVy', 1);
+
+
 -- Modif varchar for password
 ALTER TABLE utilisateur MODIFY password VARCHAR(255) NOT NULL;
 
@@ -65,9 +74,11 @@ CREATE TABLE commande(
     restitution_materiel BOOL,
     utilisateur_id INT NOT NULL,
     menu_id INT NOT NULL,
+    
     FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(utilisateur_id),
     FOREIGN KEY (menu_id) REFERENCES menu(menu_id)
 );
+
 
 CREATE TABLE plat(
     plat_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

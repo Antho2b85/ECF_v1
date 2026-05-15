@@ -71,7 +71,13 @@ p {
   transform: translateX(0) !important;
 }
 
-.btn {
+.dropdown-navbar .dropdown-menu {
+  right: -10px !important;
+  left: auto !important;
+  transform: none !important;
+}
+
+.btn-vg {
   background-color: var(--light);
   color: var(--dark) !important;
   margin-left: 70px;
@@ -134,11 +140,22 @@ section .btn-connexion {
     right: auto !important;
     transform: translateX(-50%) !important;
   }
+  .dropdown-navbar .dropdown-menu {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
 }
 
 @media (max-width: 767.98px) {
   .hero-text {
     top: 2%;
+  }
+}
+
+@media (max-width: 576px) {
+  .select-small {
+    width: 95px !important;
   }
 }
 
@@ -210,4 +227,8 @@ section .btn-connexion {
   right: 10px;
   top: 58px;
   cursor: pointer;
+}
+
+.select-small {
+  width: 150px;
 }
