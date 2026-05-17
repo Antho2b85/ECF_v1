@@ -25,8 +25,8 @@ require '../components/navbar-accueil.php';
     <!-- H1 -->
     <main class="container-fluid px-lg-3 px-1 py-4">
         <div class="text-center mt-3 col-lg-12">
-            <h1 class="text-vg-primary">Espace Administrateur</h1>
-            <p>Gerez les comptes employés et les statistiques de commandes</p>
+            <h1 class="text-vg-primary">Espace administrateur</h1>
+            <p>Gérez les comptes employés et les statistiques de commandes</p>
             <hr>
         </div>
         <!-- End H1 -->

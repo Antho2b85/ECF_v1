@@ -71,7 +71,7 @@ require '../components/navbar-accueil.php';
             </div>
 
             <div>
-                <h5 class="small fw-bold mt-3">Thémes:</h5>
+                <h5 class="small fw-bold mt-3">Thèmes:</h5>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="m-theme1">
                     <label class="form-check-label" for="m-theme1">Classique</label>
@@ -105,7 +105,7 @@ require '../components/navbar-accueil.php';
             </div>
 
             <div>
-                <h5 class="small fw-bold mt-3">Nombres de personnes:</h5>
+                <h5 class="small fw-bold mt-3">Nombre de personnes:</h5>
                 <input type="number" class="form-control bg-white" placeholder="Minimum">
             </div>
         </div>
@@ -149,7 +149,7 @@ require '../components/navbar-accueil.php';
             </div>
 
             <div>
-                <h5 class="small fw-bold mt-3">Thémes:</h5>
+                <h5 class="small fw-bold mt-3">Thèmes:</h5>
 
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="theme1">
@@ -191,7 +191,7 @@ require '../components/navbar-accueil.php';
             </div>
 
             <div>
-                <h5 class="small fw-bold mt-3">Nombres de personnes:</h5>
+                <h5 class="small fw-bold mt-3">Nombre de personnes:</h5>
                 <div class="d-flex align-items-center gap-2">
                     <input type="number" class="form-control bg-white" placeholder="Minimum">
                 </div>
@@ -313,16 +313,16 @@ require '../components/navbar-accueil.php';
                             </div>
 
                             <div class="col-md-7">
-                                <h3 class="text-vg-primary mb-2 text-lg-center">Réceptions et séminaire</h3>
+                                <h3 class="text-vg-primary mb-2 text-lg-center">Réceptions et séminaires</h3>
                                 <hr class="mt-0">
 
-                                <p class="mb-1"><strong>Thèmes:</strong> Réception</p>
+                                <p class="mb-1"><strong>Thèmes:</strong> Réceptions</p>
                                 <p class="mb-3"><strong>Régime:</strong> Varié</p>
                                 <p class="mb-1">Pour 10 personnes minimum</p>
                                 <p class="mb-4">À partir de <strong>20€</strong> / personne</p>
 
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <p class="fst-italic mb-0">Idéal pour mariage</p>
+                                    <p class="fst-italic mb-0">Idéal pour un mariage</p>
                                     <a href="/ECF_V1/frontend/pages/menu-detail.php?id=4" class="btn btn-connexion bg-custom rounded-5 btn-mobile-sm">Voir le détail</a>
                                 </div>
                             </div>

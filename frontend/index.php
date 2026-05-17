@@ -24,7 +24,7 @@ require './components/navbar-accueil.php';
         <img
           src="/ECF_V1/assets/nikolayfrolochkin-buffet-3085114_1920.jpg"
           class="w-100 h-100 object-fit-cover"
-          alt="Hero"
+          alt="Buffet de présentation"
         />
 
         <!-- Overlay sombre -->
@@ -40,8 +40,7 @@ require './components/navbar-accueil.php';
             généreuse et authentique
           </p>
 
-         <a href="/ECF_V1/frontend/pages/commande.php" class="btn btn-connexion mt-3 mt-lg-5">Reserver</a>
-          </button>
+         <a href="/ECF_V1/frontend/pages/commande.php" class="btn btn-connexion mt-3 mt-lg-5">Réserver</a>
         </div>
       </div>
 

@@ -78,7 +78,7 @@ require '../components/navbar-accueil.php';
                     <p class="mb-1"><strong>Régime :</strong> <?= htmlspecialchars($menu['regime'] ?? 'Non précisé') ?></p>
 
                     <?php if ($menu['quantite_restante'] !== null): ?>
-                        <p class="mb-1 fst-italic">Stock : <?= $menu['quantite_restante'] ?> disponibles</p>
+                        <p class="mb-1 fst-italic">Stocks : <?= $menu['quantite_restante'] ?> disponibles</p>
                     <?php endif; ?>
 
                     <hr>
@@ -86,7 +86,7 @@ require '../components/navbar-accueil.php';
                     <!-- Conditions importantes -->
                     <div class="alert alert-warning rounded-4 small" role="alert">
                         <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                        <strong>Conditions :</strong> Toute commande doit être passée au minimum 48h avant la date de prestation.
+                        <strong>Conditions :</strong> Toute commande doit être passée au minimum 48 h avant la date de prestation.
                         Le règlement s'effectue à la commande.
                     </div>
 

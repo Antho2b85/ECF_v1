@@ -18,8 +18,6 @@ $activePage = 'Galerie';
 require '../components/navbar-accueil.php';
 ?>
 
-<body>
-
 <div class="text-center mt-3 col-lg-12">
             <h1 class="text-vg-primary">L’univers Vite & Gourmand</h1>
         </div>
@@ -43,19 +41,19 @@ require '../components/navbar-accueil.php';
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/ECF_v1/assets/francky21-food-8192348_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu Gourmand"> 
+      <img src="/ECF_V1/assets/francky21-food-8192348_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu Gourmand"> 
       <div class="carousel-caption d-none d-md-block">
         <h5>Menu Gourmand</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/ECF_v1/assets/kiberstalker-ai-generated-8346161_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu de Fêtes">
+      <img src="/ECF_V1/assets/kiberstalker-ai-generated-8346161_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu de Fêtes">
       <div class="carousel-caption d-none d-md-block">
         <h5>Menu de Fêtes</h5>
       </div>
     </div>
      <div class="carousel-item">
-      <img src="/ECF_v1/assets/sookie_cfw-buffet-617156_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Buffet de représentation">
+      <img src="/ECF_V1/assets/sookie_cfw-buffet-617156_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Buffet de représentation">
       <div class="carousel-caption d-none d-md-block">
         <h5>Buffet de représentation</h5>
       </div>

@@ -26,7 +26,7 @@ require '../components/navbar-accueil.php';
     <main class="container-fluid px-lg-3 px-1 py-4">
         <div class="text-center mt-3 col-lg-12">
             <h1 class="text-vg-primary">Espace employé</h1>
-            <p>Gerez vos commandes, menus et avis clients</p>
+            <p>Gérez vos commandes, menus et avis clients</p>
             <hr>
         </div>
         <!-- End H1 -->
@@ -39,7 +39,7 @@ require '../components/navbar-accueil.php';
     <div class="row align-items-end mb-4 g-3">
         
         <div class="col-12 col-md-4 col-lg-3">
-            <label for="statut" class="text-nowrap fw-bold">Filtre par statut:</label>
+            <label for="statut" class="text-nowrap fw-bold">Filtre par statut :</label>
             <select class="form-select" id="statut">
                 <option selected>Tous</option>
                 <option value="1">Accepté</option>
@@ -49,7 +49,7 @@ require '../components/navbar-accueil.php';
         </div>
 
         <div class="col-12 col-md-5 col-lg-4">
-            <label for="client" class="text-nowrap fw-bold">Filtrer par client:</label>
+            <label for="client" class="text-nowrap fw-bold">Filtrer par client :</label>
             <input type="text" id="client" class="form-control">
         </div>
 
@@ -170,12 +170,12 @@ require '../components/navbar-accueil.php';
  <div class="col-12 col-lg-6 text-center mx-auto border rounded-3">
 <h5 class="text-vg-primary pt-2">Annuler la commande</h5>
 <hr>
-<span class="text-start d-block mb-1 fw-bold">Motif d'annulation:</span>
+<span class="text-start d-block mb-1 fw-bold">Motif d'annulation :</span>
 
 <div class="input-group justify-content-center">
   <textarea class="form-control" aria-label="With textarea"></textarea>
 </div>
-<span class="text-start d-block mt-1 fw-bold">Mode de contact:</span>
+<span class="text-start d-block mt-1 fw-bold">Mode de contact :</span>
 
 <div class="d-flex gap-4">
 <div class="form-check">
@@ -186,7 +186,7 @@ require '../components/navbar-accueil.php';
 </div>
 
 <div class="form-check">
-    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
     <label class="form-check-label text-start d-block mt-1" for="radioDefault1">
         Mail
     </label>
