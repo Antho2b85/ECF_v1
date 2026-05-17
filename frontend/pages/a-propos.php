@@ -20,15 +20,15 @@ require '../components/navbar-accueil.php';
 ?>
 
 
-<section class="container py-5">
+<section class="container py-4">
 
-  <div class="d-flex align-items-center justify-content-center mb-5">
+  <div class="d-flex align-items-center justify-content-center my-5">
     <span class="flex-grow-1 border-top border-2 border-vg"></span>
     <h2 class="text-center mx-3 text-vg-primary">À propos</h2>
     <span class="flex-grow-1 border-top border-2 border-vg"></span>
   </div>
 
-  <p class="mt-5">
+  <p class="my-5">
     Vite & Gourmand est une entreprise familiale dirigée par Julie et José,
     passionnés par la cuisine depuis plus de 25 ans. Nous proposons une cuisine
     généreuse, authentique et préparée avec soin pour accompagner vos événements.
@@ -46,13 +46,13 @@ require '../components/navbar-accueil.php';
 
 </section>
 
-</main>
 
 <img 
-  src="/ECF_V1/assets/rebecca-hansen-_WpB9l8_Kn4-unsplash.jpg"
-  class="w-100 object-fit-cover rounded"
-  style="max-height: 400px;"
-  alt="Photo gourmande">
+src="/ECF_V1/assets/rebecca-hansen-_WpB9l8_Kn4-unsplash.jpg"
+class="w-100 object-fit-cover rounded"
+style="max-height: 500px;"
+alt="Photo gourmande">
+</main>
 
 
 <!-- Footer -->

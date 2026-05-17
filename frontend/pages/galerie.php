@@ -19,6 +19,11 @@ require '../components/navbar-accueil.php';
 ?>
 
 <body>
+
+<div class="text-center mt-3 col-lg-12">
+            <h1 class="text-vg-primary">L’univers Vite & Gourmand</h1>
+        </div>
+
     <main>
 
     <!-- Carousel -->
@@ -32,31 +37,31 @@ require '../components/navbar-accueil.php';
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/ECF_V1/assets/emilia_baczynska-happy-easter-4154655_1920.jpg" class="d-block w-100" alt="Menu de Pâques">
+      <img src="/ECF_V1/assets/emilia_baczynska-happy-easter-4154655_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu de Pâques">
       <div class="carousel-caption d-none d-md-block">
         <h5>Menu de Pâques</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/ECF_v1/assets/francky21-food-8192348_1920.jpg" class="d-block w-100" alt="Menu Gourmand"> 
+      <img src="/ECF_v1/assets/francky21-food-8192348_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu Gourmand"> 
       <div class="carousel-caption d-none d-md-block">
         <h5>Menu Gourmand</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/ECF_v1/assets/kiberstalker-ai-generated-8346161_1920.jpg" class="d-block w-100" alt="Menu de Fêtes">
+      <img src="/ECF_v1/assets/kiberstalker-ai-generated-8346161_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu de Fêtes">
       <div class="carousel-caption d-none d-md-block">
         <h5>Menu de Fêtes</h5>
       </div>
     </div>
      <div class="carousel-item">
-      <img src="/ECF_v1/assets/sookie_cfw-buffet-617156_1920.jpg" class="d-block w-100" alt="Buffet de représentation">
+      <img src="/ECF_v1/assets/sookie_cfw-buffet-617156_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Buffet de représentation">
       <div class="carousel-caption d-none d-md-block">
         <h5>Buffet de représentation</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/ECF_V1/assets/stocksnap-food-2616326_1920.jpg" class="d-block w-100" alt="Nos cuisines">
+      <img src="/ECF_V1/assets/stocksnap-food-2616326_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Nos cuisines">
       <div class="carousel-caption d-none d-md-block">
         <h5>Nos cuisines</h5>
       </div>
