@@ -70,13 +70,6 @@ L'entreprise Vite & Gourmand souhaitait une application web permettant de prése
 
 Fichier `.env` placé à la racine du projet, chargé via `parse_ini_file()` dans `database.php` :
 
-```
-DB_HOST=localhost
-DB_NAME=ViteEtGourmand
-DB_USER=root
-DB_PASS=
-```
-
 > Le fichier `.env` est ajouté au `.gitignore` afin de ne jamais exposer les credentials sur GitHub.
 
 ### Extensions VS Code utilisées
@@ -154,50 +147,44 @@ Les séquences principales documentées sont :
 
 ## 6. Documentation du déploiement
 
-### Plateforme choisie : Heroku
+### Plateforme choisie : infinityFree
 
-Heroku a été choisi pour sa simplicité de configuration et sa compatibilité avec les applications PHP.
+infinityFree a été choisi pour sa simplicité de configuration et sa compatibilité avec les applications PHP.
 
 ### Étapes de déploiement
 
-#### 1 — Prérequis
+#### 1 — Création de l'hébergement
 
-- Compte Heroku créé sur [heroku.com](https://heroku.com)
-- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installé
-- Git configuré
+- Créer un compte sur [infinityfree.com](https://infinityfree.com)
+- Créer un nouvel hébergement depuis le panneau de contrôle
+- Noter le sous-domaine attribué (ex: `viteetgourmand.rf.gd`)
 
-#### 2 — Initialisation
+#### 2 — Création de la base de données
 
-```bash
-heroku login
-heroku create vite-et-gourmand
-```
+- Dans le panneau de contrôle, aller dans **"MySQL Databases"**
+- Créer une nouvelle base de données
+- Noter les credentials fournis : host, database name, username, password
 
-#### 3 — Configuration de la base de données
+#### 3 — Import de la base de données
 
-```bash
-heroku addons:create cleardb:ignite
-heroku config:get CLEARDB_DATABASE_URL
-```
+- Accéder à **phpMyAdmin** depuis le panneau de contrôle InfinityFree
+- Sélectionner la base de données créée
+- Importer le fichier `shema.sql` via l'onglet **"Importer"**
 
-#### 4 — Variables d'environnement
+#### 4 — Upload des fichiers
 
-Configurer les variables sur Heroku (équivalent du `.env`) :
+- Accéder au **File Manager** depuis le panneau de contrôle
+- Naviguer dans `htdocs`
+- Uploader les dossiers `assets/`, `backend/`, `frontend/`, `JS/` via **"Upload & Unzip"**
 
-```bash
-heroku config:set DB_HOST=xxx DB_NAME=xxx DB_USER=xxx DB_PASS=xxx
-```
+#### 5 — Configuration du fichier .env
 
-#### 5 — Déploiement
-
-```bash
-git push heroku main
-```
-
-#### 6 — Import de la base de données
-
-Importer le fichier `shema.sql` via l'interface ClearDB ou en ligne de commande.
+Créer un fichier `.env` directement sur le serveur via le File Manager avec les credentials InfinityFree :
+DB_HOST=sql311.infinityfree.com
+DB_NAME=if0_XXXXXXX_viteetgourmand
+DB_USER=if0_XXXXXXX
+DB_PASS=votremotdepasse
 
 ### URL de l'application déployée
 
-🔗 [https://vite-et-gourmand.herokuapp.com](https://vite-et-gourmand.herokuapp.com) _(à mettre à jour)_
+🔗 [http://viteetgourmand.rf.gd/ECF_V1/frontend/index.php](http://viteetgourmand.rf.gd/ECF_V1/frontend/index.php)

@@ -1,5 +1,3 @@
-CREATE DATABASE ViteEtGourmand;
-USE ViteEtGourmand;
 
 CREATE TABLE role(
     role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -13,7 +11,7 @@ INSERT INTO role (libelle) VALUES ('client');
 CREATE TABLE utilisateur(
     utilisateur_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     nom VARCHAR(50),
     prenom VARCHAR(50),
     telephone VARCHAR(50),
@@ -36,9 +34,6 @@ VALUES ('Dupont', 'Marie', '0612345678', 'employe@viteetgourmand.fr', '1 rue de 
 INSERT INTO utilisateur (nom, prenom, telephone, email, adresse_postale, password, role_id)
 VALUES ('Doe', 'John', '0622546688', 'admin@viteetgourmand.fr', '1 rue de Bordeaux', '$2y$10$fQmplAbkJLXq/T8fxRwEWOcbuRAbpPQbdEBtjjYtTfVpsBdM7eAVy', 1);
 
-
--- Modif varchar for password
-ALTER TABLE utilisateur MODIFY password VARCHAR(255) NOT NULL;
 
 CREATE TABLE avis(
     avis_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
