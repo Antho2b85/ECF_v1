@@ -21,11 +21,12 @@ require '../components/navbar-accueil.php';
 <div class="text-center mt-3 col-lg-12">
             <h1 class="text-vg-primary">L’univers Vite & Gourmand</h1>
         </div>
+        <hr>
 
     <main>
 
     <!-- Carousel -->
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleCaptions" class="carousel slide max-vh-25">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -35,32 +36,32 @@ require '../components/navbar-accueil.php';
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/ECF_V1/assets/emilia_baczynska-happy-easter-4154655_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu de Pâques">
-      <div class="carousel-caption d-none d-md-block">
+      <img src="/ECF_V1/assets/emilia_baczynska-happy-easter-4154655_1920.jpg" class="d-block w-100" alt="Menu de Pâques">
+      <div class="carousel-caption">
         <h5>Menu de Pâques</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/ECF_V1/assets/francky21-food-8192348_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu Gourmand"> 
-      <div class="carousel-caption d-none d-md-block">
+      <img src="/ECF_V1/assets/francky21-food-8192348_1920.jpg" class="d-block w-100" alt="Menu Gourmand"> 
+      <div class="carousel-caption">
         <h5>Menu Gourmand</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/ECF_V1/assets/kiberstalker-ai-generated-8346161_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Menu de Fêtes">
-      <div class="carousel-caption d-none d-md-block">
+      <img src="/ECF_V1/assets/kiberstalker-ai-generated-8346161_1920.jpg" class="d-block w-100" alt="Menu de Fêtes">
+      <div class="carousel-caption">
         <h5>Menu de Fêtes</h5>
       </div>
     </div>
      <div class="carousel-item">
-      <img src="/ECF_V1/assets/sookie_cfw-buffet-617156_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Buffet de représentation">
-      <div class="carousel-caption d-none d-md-block">
+      <img src="/ECF_V1/assets/sookie_cfw-buffet-617156_1920.jpg" class="d-block w-100" alt="Buffet de représentation">
+      <div class="carousel-caption">
         <h5>Buffet de représentation</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/ECF_V1/assets/stocksnap-food-2616326_1920.jpg" class="d-block h-75 w-100 mx-auto" alt="Nos cuisines">
-      <div class="carousel-caption d-none d-md-block">
+      <img src="/ECF_V1/assets/stocksnap-food-2616326_1920.jpg" class="d-block w-100" alt="Nos cuisines">
+      <div class="carousel-caption">
         <h5>Nos cuisines</h5>
       </div>
     </div>
@@ -75,6 +76,40 @@ require '../components/navbar-accueil.php';
   </button>
 </div>
 <!-- End carousel -->
+
+<!-- Section Pourquoi nous choisir -->
+<section class="container my-5">
+    <h2 class="text-center text-vg-primary mb-4">Pourquoi nous choisir ?</h2>
+
+    <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-3 text-center">
+            <i class="bi bi-award-fill text-vg-primary fs-1"></i>
+            <h5 class="mt-2">Qualité garantie</h5>
+            <p class="small text-muted">Des produits frais, sélectionnés avec soin pour chaque prestation.</p>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 text-center">
+            <i class="bi bi-truck text-vg-primary fs-1"></i>
+            <h5 class="mt-2">Livraison rapide</h5>
+            <p class="small text-muted">Nous assurons une livraison ponctuelle et sécurisée.</p>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 text-center">
+            <i class="bi bi-people-fill text-vg-primary fs-1"></i>
+            <h5 class="mt-2">Équipe passionnée</h5>
+            <p class="small text-muted">Un service humain, chaleureux et professionnel.</p>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 text-center">
+            <i class="bi bi-stars text-vg-primary fs-1"></i>
+            <h5 class="mt-2">Événements réussis</h5>
+            <p class="small text-muted">Mariages, fêtes, séminaires : nous créons des moments inoubliables.</p>
+        </div>
+
+    </div>
+</section>
+
 
 <?php
  include '../components/footer.php';

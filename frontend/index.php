@@ -119,7 +119,7 @@ require './components/navbar-accueil.php';
                 class="d-none d-md-block flex-grow-1 border-top border-2 border-vg"
               ></span>
             </div>
-            <div class="row row-equal">
+            <div class="row">
               <!-- IMAGE 2 -->
               <div class="col-6 col-md-6 order-1 d-flex">
                 <img
@@ -146,7 +146,7 @@ require './components/navbar-accueil.php';
 
               <!-- BOUTON MOBILE (sous image + texte) -->
               <div class="col-12 d-md-none text-center order-3">
-                <a href="/ECF_V1/frontend/pages/galerie.php" class="btn btn-connexion mt-3">Galerie</a>
+                <a href="/ECF_V1/frontend/pages/galerie.php" class="btn btn-connexion mt-3 mx-auto d-block">Galerie</a>
               </div>
             </div>
           </div>

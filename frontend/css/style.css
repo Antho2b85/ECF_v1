@@ -232,3 +232,8 @@ section .btn-connexion {
 .select-small {
   width: 150px;
 }
+
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+}
