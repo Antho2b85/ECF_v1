@@ -9,7 +9,6 @@ if (empty($_SESSION['csrf_token'])) {
 <?php require '../components/head.php';
 ?>
 
-<body>
     <main>
     
     <?php
@@ -55,10 +54,6 @@ alt="Photo gourmande">
 </main>
 
 
-<!-- Footer -->
-<?php
- include '../components/footer.php';
-?>
 
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -66,4 +61,8 @@ alt="Photo gourmande">
         crossorigin="anonymous"></script>
         
         <script src="/ECF_V1/JS/main.js"></script>
-    </body>
+
+        <!-- Footer -->
+<?php
+ require '../components/footer.php';
+?>

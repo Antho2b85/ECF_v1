@@ -9,7 +9,6 @@ if (empty($_SESSION['csrf_token'])) {
 <?php require '../components/head.php';
 ?>
 
-<body>
     
     <?php
     $title = "Tableau de bord";
@@ -100,7 +99,7 @@ require '../components/navbar-accueil.php';
 
 <div class="mb-2 pb-2 d-flex gap-3 justify-content-lg-between">
     <a href="/ECF_V1/frontend/pages/menus.php" class="btn bg-custom-green btn-connexion">Voir tous les menus</a>
-    <button class="btn bg-custom-green btn-connexion" type="button">Nouvelle commande</button>
+    <a href="/ECF_V1/frontend/pages/menus.php" class="btn bg-custom-green btn-connexion">Nouvelle commande</a>
 </div>
 
 </div>
@@ -113,5 +112,3 @@ require '../components/navbar-accueil.php';
 
     <?php require "../components/footer.php";
 ?>
-
-</body>

@@ -5,13 +5,11 @@ if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
+<!-- =================================================== -->
 
-
-<!doctype html>
-<html lang="fr">
   <?php require './components/head.php';
 ?>
-  <body>
+
     <?php
     $title = "Vite & Gourmand";
 $activePage = "Accueil";
@@ -210,9 +208,6 @@ require './components/navbar-accueil.php';
     ></script>
 
     <?php
-
     require './components/footer.php';
 ?>
 
-  </body>
-</html>
