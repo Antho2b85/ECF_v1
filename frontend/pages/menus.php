@@ -5,12 +5,11 @@ if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
+<!-- =============================================== -->
 
 <?php require '../components/head.php';
 ?>
 
-<body>
-    
     <?php
     $title = "Vite & Gourmand";
 $activePage = 'menuG';
@@ -341,9 +340,6 @@ require '../components/navbar-accueil.php';
     </main>
 
 <!-- Footer -->
- <?php
- include '../components/footer.php';
-?>
 
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -351,5 +347,7 @@ require '../components/navbar-accueil.php';
         crossorigin="anonymous"></script>
 
             <script src="/ECF_V1/JS/main.js"></script>
-
-</body>
+            
+ <?php
+ require '../components/footer.php';
+?>

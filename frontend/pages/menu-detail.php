@@ -39,7 +39,6 @@ $image = $images[$id] ?? '/ECF_V1/assets/francky21-food-8192348_1920.jpg';
 
 <?php require '../components/head.php'; ?>
 
-<body>
     <?php
     $title = "Vite & Gourmand";
 $activePage = 'menuG';
@@ -122,5 +121,3 @@ require '../components/navbar-accueil.php';
     <script src="/ECF_V1/JS/main.js"></script>
 
     <?php require '../components/footer.php'; ?>
-
-</body>

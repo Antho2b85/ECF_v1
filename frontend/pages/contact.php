@@ -9,7 +9,6 @@ if (empty($_SESSION['csrf_token'])) {
 <?php require '../components/head.php';
 ?>
 
-<body>
     
     <?php
     $title = "Vite & Gourmand";
@@ -78,11 +77,6 @@ require '../components/navbar-accueil.php';
         </div>
 </div>
 
-<!-- Footer -->
-
-        <?php
- include '../components/footer.php';
-?>
  
 
     <script
@@ -92,4 +86,9 @@ require '../components/navbar-accueil.php';
 
             <script src="/ECF_V1/JS/main.js"></script>
     </main>
-    </body>
+
+    <!-- Footer -->
+
+        <?php
+ require '../components/footer.php';
+?>

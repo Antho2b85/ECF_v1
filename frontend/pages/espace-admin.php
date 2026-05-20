@@ -13,8 +13,6 @@ require '../../backend/database/database.php';
 <?php require '../components/head.php';
 ?>
 
-<body>
-    
     <?php
     $title = "Tableau de bord";
 $activePage = 'Espace administrateur';
@@ -207,11 +205,9 @@ require '../components/navbar-accueil.php';
 </div>
 </div>
 </div>
+</main>
 
 
-        <?php
- include '../components/footer.php';
-?>
  
 
     <script
@@ -245,5 +241,6 @@ require '../components/navbar-accueil.php';
   });
 </script>
 
-                
-            </body>
+        <?php
+ require '../components/footer.php';
+?>
