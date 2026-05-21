@@ -31,11 +31,11 @@ J'ai utilisé **Trello** avec une organisation en **méthode Kanban**.
 
 Le tableau Trello est organisé en 4 colonnes :
 
-| Colonne | Description |
-| **Backlog** | Toutes les tâches identifiées au départ |
-| **À faire** | Toutes les tâches prioritaires |
-| **En cours** | Tâches en cours de développement |
-| **Terminé** | Tâches validées et fonctionnelles |
+| Colonne - Description |
+| **Backlog**- Toutes les tâches identifiées au départ |
+| **À faire** - Toutes les tâches prioritaires |
+| **En cours** - Tâches en cours de développement |
+| **Terminé** - Tâches validées et fonctionnelles |
 
 ---
 
@@ -87,7 +87,7 @@ Le tableau Trello est organisé en 4 colonnes :
 
 - Tests fonctionnels en local via XAMPP
 - Correction des bugs
-- Déploiement sur Heroku
+- Déploiement sur InfinityFree
 - Rédaction du README et de la documentation
 
 ---

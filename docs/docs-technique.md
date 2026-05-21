@@ -38,7 +38,7 @@ L'entreprise Vite & Gourmand souhaitait une application web permettant de prése
 
 | Technologie | Justification |
 
-| **Heroku** | Plateforme de déploiement cloud simple à configurer, offre une version gratuite adaptée à un projet ECF |
+| **InfinityFree** | Plateforme de déploiement cloud simple à configurer, offre une version gratuite adaptée à un projet ECF |
 
 ---
 
@@ -46,17 +46,17 @@ L'entreprise Vite & Gourmand souhaitait une application web permettant de prése
 
 ### Outils utilisés
 
-| Outil | Version | Rôle |
+Outil - Version - Rôle
 
-| Visual Studio Code | Dernière version | Éditeur de code |
-| XAMPP | 8.2.12 | Serveur local (Apache + MySQL + PHP) |
-| PHP | 8.2.12 | Langage back-end |
-| MySQL | Via XAMPP | Base de données relationnelle |
-| Git | Dernière version | Gestion de version |
-| GitHub | — | Hébergement du dépôt |
-| Figma | — | Maquettes Wireframe et Mockup |
-| draw.io | — | Diagrammes MCD, utilisation, séquence |
-| Trello | — | Gestion de projet Kanban |
+Visual Studio Code - Dernière version - Éditeur de code |
+XAMPP - 8.2.12 - Serveur local (Apache + MySQL + PHP) |
+PHP - 8.2.12 - Langage back-end |
+MySQL - Via XAMPP - Base de données relationnelle |
+Git - Dernière version - Gestion de version |
+GitHub - Hébergement du dépôt |
+Figma - Maquettes Wireframe et Mockup |
+draw.io - Diagrammes MCD, utilisation, séquence |
+Trello - Gestion de projet Kanban |
 
 ### Configuration XAMPP
 
