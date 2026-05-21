@@ -65,26 +65,25 @@ function togglePassword(fieldID) {
   }
 }
 
-// Sur la page "commande.php" fonction pour que l'input du nombre de personne augmente le prix total change en fonction du nombre de personnes
+// Mettre l'input de la page commande par defaut sur 1 avec le prix adequat
 document.addEventListener("DOMContentLoaded", () => {
   const numberClient = document.getElementById("numberClient");
   const totalPrice = document.getElementById("totalPrice");
+  const totalFinal = document.getElementById("totalFinal");
+  const fraisLivraison = 7.5;
 
-  if (!numberClient || !totalPrice) {
-    return; // On quitte si on n'est pas sur commande.php
+  function updatePrice() {
+    const nb = parseInt(numberClient.value);
+    const priceOne = nb * prixParPersonne;
+    const final = priceOne + fraisLivraison;
+
+    totalPrice.innerText = priceOne.toFixed(2) + " €";
+    totalFinal.innerText = final.toFixed(2) + " €";
   }
 
-  numberClient.addEventListener("input", () => {
-    const valeurClient = Number(numberClient.value);
-    const total = valeurClient * prixParPersonne;
-    totalPrice.innerText = total + " €";
+  // Calcul automatique au chargement
+  updatePrice();
 
-    const fraisLivraison = 7.5;
-    const totalFinal = total + fraisLivraison;
-
-    const totalFinalSpan = document.getElementById("totalFinal");
-    if (totalFinalSpan) {
-      totalFinalSpan.innerText = totalFinal.toFixed(2) + " €";
-    }
-  });
+  // Calcul quand l'utilisateur change le nombre de personnes
+  numberClient.addEventListener("input", updatePrice);
 });

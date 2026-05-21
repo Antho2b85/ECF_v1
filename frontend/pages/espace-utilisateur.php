@@ -1,12 +1,18 @@
 <?php
 
 session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: /ECF_V1/frontend/index.php');
+    exit;
+}
+
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
 
 <?php require '../components/head.php';
+require '../../backend/database/database.php';
 ?>
 
     
@@ -17,6 +23,32 @@ $activePage = 'Mon espace';
 require '../components/navbar-accueil.php';
 ?>
 
+<!-- Message commande enregistré -->
+<?php if (isset($_GET['success'])): ?>
+<script>
+    alert("Votre commande a bien été enregistrée !");
+</script>
+<?php endif; ?>
+<!-- End message enregistré -->
+
+<!-- Récupération de l'id utilisateur -->
+    <?php
+    $userId = $_SESSION['user_id'];
+?>
+<!-- End récupération id utilisateur -->
+
+<!-- Requête pour récuperer les details de la commande utilisateur (avec ALIAS et JOIN) -->
+<?php
+$stmt = $pdo -> prepare('SELECT c.numero_commande, c.date_commande, c.date_prestation, c.heure_livraison, c.nombre_personne, c.statut, m.titre AS menu_nom
+FROM commande c JOIN menu m ON c.menu_id = m.menu_id WHERE c.utilisateur_id = ?
+ORDER BY c.date_commande DESC
+');
+$stmt->execute([$userId]);
+$commandes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+<!-- End récupération details commande -->
+
+
 <div class="container-fluid mt-2 border bg-custom-light rounded-4">
     <div class="row align-items-center">
 
@@ -26,7 +58,7 @@ require '../components/navbar-accueil.php';
             <p class="small text-muted mt-1 d-none d-lg-block">Ravi de vous revoir.</p>
         </div>
 
-        <!-- Colonne image -->
+        <!-- Colonne image en dur (mettre l'input de type file prochainement)-->
         <div class="col-auto py-3 pe-3">
             <img src="/ECF_V1/assets/ernestflowerss-boy-8847075_1920.jpg"
                  class="img-fluid rounded-circle"
@@ -57,40 +89,64 @@ require '../components/navbar-accueil.php';
     <p>Rôle: <?= $_SESSION['role_id'] == 1 ? 'Administrateur' : ($_SESSION['role_id'] == 2 ? 'Employé' : 'Utilisateur') ?></p>
 </div>
 
+<!-- condition pour afficher le menu -->
+<?php
+$maxBlocs = 2;
+
+$commandesAffichees = array_slice($commandes, 0, $maxBlocs);
+
+// Calcule de combien de blocs vides il faut ajouter
+$blocsVides = $maxBlocs - count($commandesAffichees);
+?>
+
+<?php foreach ($commandesAffichees as $commande): ?>
 
 <div class="container-fluid bg-custom-light rounded-4 mt-2">
     <div>
-    <h5 class="fw-bold pt-3 small">Mes commandes:</h5><hr>
+        <h5 class="fw-bold pt-3 small">Mes commandes:</h5><hr>
     </div>
 
     <div class="d-flex flex-column border border-black rounded-3 mb-3 px-1">
-        <p class="text-vg-primary">Commande #</p>
-        <p>Date:</p>
-        <p>Menu:</p>
+        <p class="text-vg-primary">Commande #<?= $commande['numero_commande'] ?></p>
+        <p>Date : <?= $commande['date_commande'] ?></p>
+        <p>Menu : <?= $commande['menu_nom'] ?></p>
 
-<div class="d-flex justify-content-between align-items-center">
-        <p class="mb-0">Statut:</p>
-        <button type="button" class="btn bg-custom-green btn-connexion align-self-end mb-1">
-            Voir le détail
-        </button>
-        </div>
-    </div>
-    
- <div class="d-flex flex-column border border-black rounded-3 px-1">
-        <p class="text-vg-primary">Commande #</p>
-        <p>Date:</p>
-        <p>Menu:</p>
-
-<div class="d-flex justify-content-between align-items-center">
-        <p class="mb-0">Statut:</p>
-        <button type="button" class="btn bg-custom-green btn-connexion align-self-end mb-1">
-            Voir le détail
-        </button>
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="mb-0">Statut : <?= $commande['statut'] ?></p>
+            <button type="button" class="btn bg-custom-green btn-connexion align-self-end mb-1">
+                Voir le détail
+            </button>
         </div>
     </div>
 </div>
 
+<?php endforeach; ?>
 
+
+<?php for ($i = 0; $i < $blocsVides; $i++): ?>
+
+<div class="container-fluid bg-custom-light rounded-4 mt-2">
+    <div>
+        <h5 class="fw-bold pt-3 small">Mes commandes:</h5><hr>
+    </div>
+
+    <div class="d-flex flex-column border border-black rounded-3 mb-3 px-1">
+        <p class="text-vg-primary">Commande # — Aucune commande</p>
+        <p>Date : —</p>
+        <p>Menu : —</p>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="mb-0">Statut : —</p>
+            <button type="button" class="btn bg-custom-green btn-connexion align-self-end mb-1" disabled>
+                Voir le détail
+            </button>
+        </div>
+    </div>
+</div>
+
+<?php endfor; ?>
+
+<!-- Bloc action rapide -->
 <div class="container-fluid rounded-4 pt-2 mt-2">
     <div>
         <h5 class="fw-bold">Actions rapides</h5>

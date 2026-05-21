@@ -67,6 +67,16 @@ require __DIR__ . '/../components/navbar-accueil.php';
         <!-- End H1 -->
 
 <!-- Bloc informations -->
+ <!-- Formulaire pour récuperer les informations commande -->
+  <form action="/ECF_V1/backend/traitement-commande.php" method="post">
+<input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+  <input type="hidden" name="menu_id" value="<?= $menu['menu_id'] ?>">
+<input type="hidden" name="utilisateur_id" value="<?= $_SESSION['user_id'] ?>">
+<input type="hidden" name="prix_par_personne" value="<?= $menu['prix_par_personne'] ?>">
+<input type="hidden" name="prix_livraison" value="7.5">
+<input type="hidden" id="prixTotalInput" name="prix_total">
+
+
 <div class="d-flex gap-2">
     <i class="bi bi-pen text-success"></i>
     <h5 class="fw-bold text-decoration-underline">Vos informations:</h5>
@@ -132,7 +142,7 @@ require __DIR__ . '/../components/navbar-accueil.php';
 <div class="mt-3 col-12 col-lg-6 col-md-12">
     <h5 class="text-vg-primary"><?= htmlspecialchars($menu['titre']) ?></h5>
 <label for="numberClient" class="fw-bold pt-3 pe-3">Nombre de personnes:</label>
-<input type="number" id="numberClient" class="form-control" name="number">
+<input type="number" id="numberClient" class="form-control" value="1" name="number">
 <p class="bg-success-subtle">10% de reduction dès 9 personnes réservés !</p>
 </div>
 </div>
@@ -174,8 +184,9 @@ require __DIR__ . '/../components/navbar-accueil.php';
 <p>Livraison hors Bordeaux +0,59€ par km supplémentaire</p>
 
 <div class="text-center py-3">
-    <button type="button" class="btn btn-success btn-connexion">Confirmer la commande</button>
+    <button type="submit" class="btn btn-success btn-connexion">Confirmer la commande</button>
 </div>
+</form>
 </main> 
 
 <!-- Envoi la valeur de "prix_par_personne" au fichier main.js -->
