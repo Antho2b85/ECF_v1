@@ -1,4 +1,5 @@
 <?php
+
 // Connexion BDD-PHP
 $env = parse_ini_file(__DIR__ . '/../../.env');
 
@@ -12,5 +13,3 @@ try {
 } catch (PDOException $e) {
     die('Erreur de connexion');
 }
-
-// echo 'Connexion réussi !';
