@@ -10,6 +10,15 @@ if (empty($_SESSION['csrf_token'])) {
   <?php require './components/head.php';
 ?>
 
+<!-- Message d'inscription réussi -->
+ <?php
+ if (isset($_GET['register']) && $_GET['register'] === 'success'): ?>
+  <script>
+  alert("Votre inscription a bien été effectuée !");
+  </script>
+ <?php endif; ?>
+<!-- End message inscription -->
+
     <?php
     $title = "Vite & Gourmand";
 $activePage = "Accueil";
