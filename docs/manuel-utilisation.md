@@ -34,16 +34,15 @@ http://localhost/ECF_V1/frontend/pages/index.php
 ### En ligne
 
 ```
-https://vite-et-gourmand.herokuapp.com *(à mettre à jour)*
+http://viteetgourmand.rf.gd
 ```
 
 ---
 
 ## Comptes de test
 
-**Administrateur** | admin@viteetgourmand.fr | Administrateur123!
+**Administrateur** fournit dans le doc ECF sur la plateforme de Studi
 **Employé** | employe@viteetgourmand.fr | Employe123!
-**Utilisateur** | pascal.paoli@email.com | Morosaglia123!
 
 ---
 
@@ -232,6 +231,7 @@ Connectez-vous avec un compte administrateur. Vous serez redirigé vers l'espace
 | Page               | URL                                      |
 | ------------------ | ---------------------------------------- |
 | Accueil            | `/frontend/index.php`                    |
+| Galerie            | `/frontend/pages/galerie.php`            |
 | Menus              | `/frontend/pages/menus.php`              |
 | Détail menu        | `/frontend/pages/menu-detail.php?id=X`   |
 | Créer un compte    | `/frontend/pages/create-account.php`     |
